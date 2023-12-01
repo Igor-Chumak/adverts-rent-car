@@ -10,7 +10,7 @@ import DarkThemeProvider from 'components/DarkThemeProvider/DarkThemeProvider';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/goit-react-hw-08-phonebook">
+    <BrowserRouter basename="/adverts-rent-car">
       <ReduxProvider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <DarkThemeProvider>
