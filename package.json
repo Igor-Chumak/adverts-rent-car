@@ -1,8 +1,8 @@
 {
-  "name": "adverts-rent-car on react-homework-template",
+  "name": "adverts-rent-car",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Igor-Chumak.github.io/adverts-rent-car/",
+  "homepage": "https://igor-chumak.github.io/adverts-rent-car/",
   "dependencies": {
     "@redux-devtools/extension": "^3.2.5",
     "@reduxjs/toolkit": "^1.9.5",
