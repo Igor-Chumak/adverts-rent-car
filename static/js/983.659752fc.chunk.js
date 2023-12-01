@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[983],{3983:function(e,t,r){r.r(t);var n=r(5829),c=r(3329);t.default=function(){return(0,c.jsxs)(n.Zv,{children:[(0,c.jsx)("h1",{style:{fontSize:"40px",textAlign:"center"},children:'Welcome to homepage "Adverts rent car"'}),(0,c.jsx)("h2",{children:"\xa9 Igor Chumak & GoIT"})]})}}}]);
+//# sourceMappingURL=983.659752fc.chunk.js.map
