@@ -50,7 +50,7 @@ export const theme = Object.freeze({
 
 export const darkTheme = {
   body: [
-    `linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),           url(${bgimage})`,
+    `linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),           url(${bgimage}) no-repeat  top left/cover`,
   ],
   // body: ['linear-gradient(to bottom, #262626,  #e2e2e2)'],
   textColor: '#fff',
