@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkadverts_rent_car=self.webpackChunkadverts_rent_car||[]).push([[983],{3983:function(e,n,r){r.r(n);var t=r(688),c=r(3329);n.default=function(){return(0,c.jsxs)(t.Zv,{children:[(0,c.jsx)("h1",{style:{fontSize:"40px",textAlign:"center"},children:'Welcome to homepage "Phonebook"'}),(0,c.jsx)("h2",{children:"\xa9 Igor Chumak & GoIT"})]})}}}]);
+//# sourceMappingURL=983.067c4687.chunk.js.map

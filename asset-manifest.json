@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/adverts-rent-car/static/css/main.9566b64b.css",
-    "main.js": "/adverts-rent-car/static/js/main.14db0a58.js",
-    "static/js/983.80115bdc.chunk.js": "/adverts-rent-car/static/js/983.80115bdc.chunk.js",
-    "static/js/432.5dd0ef38.chunk.js": "/adverts-rent-car/static/js/432.5dd0ef38.chunk.js",
-    "static/js/637.52df2abb.chunk.js": "/adverts-rent-car/static/js/637.52df2abb.chunk.js",
-    "static/js/246.b478548e.chunk.js": "/adverts-rent-car/static/js/246.b478548e.chunk.js",
+    "main.js": "/adverts-rent-car/static/js/main.da5c785f.js",
+    "static/js/983.067c4687.chunk.js": "/adverts-rent-car/static/js/983.067c4687.chunk.js",
+    "static/js/432.94073c7d.chunk.js": "/adverts-rent-car/static/js/432.94073c7d.chunk.js",
+    "static/js/637.422e7ef0.chunk.js": "/adverts-rent-car/static/js/637.422e7ef0.chunk.js",
+    "static/js/246.8104dd66.chunk.js": "/adverts-rent-car/static/js/246.8104dd66.chunk.js",
     "static/media/pexels-tom-van-dyck-1920x1280.jpg": "/adverts-rent-car/static/media/pexels-tom-van-dyck-1920x1280.4105399fdd7b07ad440b.jpg",
     "index.html": "/adverts-rent-car/index.html",
     "main.9566b64b.css.map": "/adverts-rent-car/static/css/main.9566b64b.css.map",
-    "main.14db0a58.js.map": "/adverts-rent-car/static/js/main.14db0a58.js.map",
-    "983.80115bdc.chunk.js.map": "/adverts-rent-car/static/js/983.80115bdc.chunk.js.map",
-    "432.5dd0ef38.chunk.js.map": "/adverts-rent-car/static/js/432.5dd0ef38.chunk.js.map",
-    "637.52df2abb.chunk.js.map": "/adverts-rent-car/static/js/637.52df2abb.chunk.js.map",
-    "246.b478548e.chunk.js.map": "/adverts-rent-car/static/js/246.b478548e.chunk.js.map"
+    "main.da5c785f.js.map": "/adverts-rent-car/static/js/main.da5c785f.js.map",
+    "983.067c4687.chunk.js.map": "/adverts-rent-car/static/js/983.067c4687.chunk.js.map",
+    "432.94073c7d.chunk.js.map": "/adverts-rent-car/static/js/432.94073c7d.chunk.js.map",
+    "637.422e7ef0.chunk.js.map": "/adverts-rent-car/static/js/637.422e7ef0.chunk.js.map",
+    "246.8104dd66.chunk.js.map": "/adverts-rent-car/static/js/246.8104dd66.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9566b64b.css",
-    "static/js/main.14db0a58.js"
+    "static/js/main.da5c785f.js"
   ]
 }
