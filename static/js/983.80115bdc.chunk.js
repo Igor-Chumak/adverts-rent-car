@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkadverts_rent_car_on_react_homework_template=self.webpackChunkadverts_rent_car_on_react_homework_template||[]).push([[983],{3983:function(e,t,r){r.r(t);var n=r(688),o=r(3329);t.default=function(){return(0,o.jsxs)(n.Zv,{children:[(0,o.jsx)("h1",{style:{fontSize:"40px",textAlign:"center"},children:'Welcome to homepage "Phonebook"'}),(0,o.jsx)("h2",{children:"\xa9 Igor Chumak & GoIT"})]})}}}]);
+//# sourceMappingURL=983.80115bdc.chunk.js.map

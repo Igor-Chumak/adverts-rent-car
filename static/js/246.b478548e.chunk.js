@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkadverts_rent_car_on_react_homework_template=self.webpackChunkadverts_rent_car_on_react_homework_template||[]).push([[246],{6246:function(e,t,n){n.r(t);var r=n(688),s=n(3329);t.default=function(){return(0,s.jsxs)("main",{children:[(0,s.jsx)(r.$0,{title:"Phonebook",children:(0,s.jsx)(r.t,{})}),(0,s.jsxs)(r.$0,{title:"Contacts",children:[(0,s.jsx)(r.wn,{}),(0,s.jsx)(r.CR,{})]})]})}}}]);
+//# sourceMappingURL=246.b478548e.chunk.js.map
