@@ -1,4 +1,4 @@
-import bgimage from 'image/pexels-tom-van-dyck-1920x1280.jpg';
+import bgimage from 'image/car-rent-1920x1280.jpg';
 
 export const theme = Object.freeze({
   colors: {
