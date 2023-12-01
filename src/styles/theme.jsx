@@ -2,7 +2,6 @@ import bgimage from 'image/car-rent-1920x1280.jpg';
 
 export const theme = Object.freeze({
   colors: {
-    accent: '#2196F3',
     white: '#ffffff',
     gray: '#9e9e9e',
     darkgrey: '#757575',
@@ -11,7 +10,10 @@ export const theme = Object.freeze({
     mainBackground: ['linear-gradient(to bottom, #c9d6ff,  #e2e2e2)'],
     tagBackground: ['linear-gradient(to bottom, #FFD194, #D1913C)'],
     alert: '#ec8080',
-    title: '#3f0101',
+    title: '#002069',
+    // title: '#3f0101',
+    accent: '#3470FF',
+    hover: '#0B44CD',
   },
 
   fontSizes: {
@@ -50,14 +52,14 @@ export const theme = Object.freeze({
 
 export const darkTheme = {
   body: [
-    `linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),           url(${bgimage}) no-repeat  top left/cover`,
+    `linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),           url(${bgimage}) no-repeat top left/cover`,
   ],
   // body: ['linear-gradient(to bottom, #262626,  #e2e2e2)'],
   textColor: '#fff',
 };
 
 export const lightTheme = {
-  body: [`url(${bgimage}) no-repeat  top left/cover`],
+  body: [`url(${bgimage}) no-repeat top left/cover`],
   // body: ['linear-gradient(to bottom, #c9d6ff,  #e2e2e2)'],
   textColor: '#000',
 };
