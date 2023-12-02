@@ -4,7 +4,7 @@ const CatalogPage = () => {
   return (
     <WrapPage>
       {/* <Section title="Filter"></Section> */}
-      <Section title="Adverts">
+      <Section title="">
         <CardList />
       </Section>
     </WrapPage>

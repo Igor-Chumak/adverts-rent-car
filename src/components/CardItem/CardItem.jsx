@@ -6,7 +6,13 @@ import {
 } from 'react-redux';
 import { selectIsLoading } from 'store';
 import { Button } from 'components';
-import { CardWrap, ImgWrap, InfoName, InfoWrap } from './CardItem.styled';
+import {
+  CardWrap,
+  ImgWrap,
+  InfoLine,
+  InfoName,
+  InfoWrap,
+} from './CardItem.styled';
 import { Modal } from 'components/Modal/Modal';
 
 import DEFAULT_PHOTO from 'images/no_photo.jpg';
@@ -19,16 +25,16 @@ export const CardItem = ({ advert }) => {
     model = '',
     type = '',
     img: imgURL,
-    description = '',
-    fuelConsumption = '',
-    engineSize = '',
+    // description = '',
+    // fuelConsumption = '',
+    // engineSize = '',
     accessories = [],
-    functionalities = [],
+    // functionalities = [],
     rentalPrice = '',
     rentalCompany = '',
     address = '',
-    rentalConditions = '',
-    mileage = 0,
+    // rentalConditions = '',
+    // mileage = 0,
   } = advert;
   const [openEditModal, setOpenEditModal] = useState(false);
   // const dispatch = useDispatch();
@@ -54,7 +60,19 @@ export const CardItem = ({ advert }) => {
             <p>
               {make} <span>{model}</span>, {year}
             </p>
+            <p>{rentalPrice}</p>
           </InfoName>
+          <InfoLine>
+            <p>{address ? address.split(',')[1] : ''}</p>
+            <p>{address ? address.split(',')[2] : ''}</p>
+            <p>{rentalCompany}</p>
+          </InfoLine>
+          <InfoLine>
+            <p>{type}</p>
+            <p>{make}</p>
+            <p>{id}</p>
+            <p>{accessories[0]}</p>
+          </InfoLine>
         </InfoWrap>
         <Button
           type="button"
