@@ -5,7 +5,7 @@ export * from 'store/contacts/contactsSlice';
 export * from 'store/contacts/filterSlice';
 export * from 'store/contacts/sortbySlice';
 export * from 'store/contacts/contactsHandlers';
-export * as api from 'store/contacts/operationsAPI';
+export * as api1 from 'store/contacts/operationsAPI';
 export * from 'store/theme/themeSlice';
 export * from 'store/theme/selectorsTheme';
 export * from 'store/auth/authSlice';

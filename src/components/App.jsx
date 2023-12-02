@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoading, selectError } from 'store';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
@@ -61,15 +61,7 @@ export const App = () => {
               />
             }
           />
-          <Route
-            path="*"
-            element={
-              <RestrictedRoute
-                redirectTo="/catalog"
-                component={<CatalogPage />}
-              />
-            }
-          />
+          <Route path="*" element={<Navigate to={'/'} />} />
         </Route>
       </Routes>
       {isLoading && <Loader />}

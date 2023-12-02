@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { api, selectIsLoading } from 'store';
+import { api1 as api, selectIsLoading } from 'store';
 import { BtnItem } from 'components';
 import { BtnWrap, ContactItem } from './ContactItems.styled';
 import { Modal } from 'components/Modal/Modal';

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { api, selectVisibleContacts } from 'store';
+import { api1 as api, selectVisibleContacts } from 'store';
 import { ContactItems } from 'components';
 import { ContactListBox, ContactListNoItems } from './ContactList.styled';
 

@@ -7,7 +7,7 @@ export const SharedLayout = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <div>
+    <>
       <Header>
         <Navigation />
         {isLoggedIn ? <UserMenu /> : <UserMenu />}
@@ -15,6 +15,6 @@ export const SharedLayout = () => {
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
-    </div>
+    </>
   );
 };

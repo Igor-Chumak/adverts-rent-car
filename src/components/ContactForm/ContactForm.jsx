@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Notification } from 'components';
-import { api, selectContacts, selectIsLoading } from 'store';
+import { api1 as api, selectContacts, selectIsLoading } from 'store';
 import {
   ContactFormForm,
   ContactFormLabel,

@@ -10,7 +10,7 @@ import {
 } from 'components/ContactForm/ContactForm.styled';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { api } from 'store';
+import { api1 as api } from 'store';
 
 export const Modal = ({ contactEdit, handleCloseModal }) => {
   const dispatch = useDispatch();

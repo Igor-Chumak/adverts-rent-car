@@ -1,10 +1,17 @@
-import { ContainerPage } from 'components';
+// import { ContainerPage } from 'components';
+import { Section, ContactForm, ContactList, Filter } from 'components';
 
 const FavoritesPage = () => {
   return (
-    <ContainerPage>
-      <h1>This is Favorites Page</h1>
-    </ContainerPage>
+    <main>
+      <Section title="Phonebook">
+        <ContactForm />
+      </Section>
+      <Section title="Contacts">
+        <Filter />
+        <ContactList />
+      </Section>
+    </main>
   );
 };
 
