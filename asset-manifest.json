@@ -1,22 +1,20 @@
 {
   "files": {
     "main.css": "/adverts-rent-car/static/css/main.9566b64b.css",
-    "main.js": "/adverts-rent-car/static/js/main.72b7cefa.js",
-    "static/js/983.41faa61c.chunk.js": "/adverts-rent-car/static/js/983.41faa61c.chunk.js",
-    "static/js/432.6575906e.chunk.js": "/adverts-rent-car/static/js/432.6575906e.chunk.js",
-    "static/js/637.b865bd7b.chunk.js": "/adverts-rent-car/static/js/637.b865bd7b.chunk.js",
-    "static/js/246.e8deb0ae.chunk.js": "/adverts-rent-car/static/js/246.e8deb0ae.chunk.js",
+    "main.js": "/adverts-rent-car/static/js/main.6a73cbc3.js",
+    "static/js/983.f059aca4.chunk.js": "/adverts-rent-car/static/js/983.f059aca4.chunk.js",
+    "static/js/69.1fc9299c.chunk.js": "/adverts-rent-car/static/js/69.1fc9299c.chunk.js",
+    "static/js/697.b7e85b11.chunk.js": "/adverts-rent-car/static/js/697.b7e85b11.chunk.js",
     "static/media/car-rent-1920x1280.jpg": "/adverts-rent-car/static/media/car-rent-1920x1280.925edf290d77bbc81653.jpg",
     "index.html": "/adverts-rent-car/index.html",
     "main.9566b64b.css.map": "/adverts-rent-car/static/css/main.9566b64b.css.map",
-    "main.72b7cefa.js.map": "/adverts-rent-car/static/js/main.72b7cefa.js.map",
-    "983.41faa61c.chunk.js.map": "/adverts-rent-car/static/js/983.41faa61c.chunk.js.map",
-    "432.6575906e.chunk.js.map": "/adverts-rent-car/static/js/432.6575906e.chunk.js.map",
-    "637.b865bd7b.chunk.js.map": "/adverts-rent-car/static/js/637.b865bd7b.chunk.js.map",
-    "246.e8deb0ae.chunk.js.map": "/adverts-rent-car/static/js/246.e8deb0ae.chunk.js.map"
+    "main.6a73cbc3.js.map": "/adverts-rent-car/static/js/main.6a73cbc3.js.map",
+    "983.f059aca4.chunk.js.map": "/adverts-rent-car/static/js/983.f059aca4.chunk.js.map",
+    "69.1fc9299c.chunk.js.map": "/adverts-rent-car/static/js/69.1fc9299c.chunk.js.map",
+    "697.b7e85b11.chunk.js.map": "/adverts-rent-car/static/js/697.b7e85b11.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9566b64b.css",
-    "static/js/main.72b7cefa.js"
+    "static/js/main.6a73cbc3.js"
   ]
 }
