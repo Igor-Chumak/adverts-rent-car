@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const CardsListBox = styled.ul`
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: ${props => props.theme.spacing(25)};
   /* margin-bottom: ${props => props.theme.spacing(3)}; */
   /* padding-top: ${props => props.theme.spacing(2)}; */
   /* padding-bottom: ${props => props.theme.spacing(2)}; */

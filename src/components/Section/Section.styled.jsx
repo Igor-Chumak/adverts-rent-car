@@ -6,7 +6,7 @@ export const SectionBox = styled.section`
   /* &:last-child {
     padding-bottom: ${props => props.theme.spacing(25)};
   } */
-  outline: 1px solid blue;
+  /* outline: 1px solid blue; */
 `;
 
 export const Title = styled.h2`

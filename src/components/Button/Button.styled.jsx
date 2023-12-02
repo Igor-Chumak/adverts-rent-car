@@ -19,10 +19,17 @@ export const Button = styled.button`
   }
 `;
 
-// export const BtnItem = styled(Button)`
-//   margin-left: 0;
-//   margin-right: 0;
-// `;
+export const BtnLoadMore = styled.button`
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  display: block;
+  color: ${props => props.theme.colors.accent};
+  font-weight: ${props => props.theme.fontWeight.medium};
+  font-size: ${props => props.theme.fontSizes.medium};
+  line-height: 1.5;
+  text-align: center;
+`;
 
 // export const Clear = styled(Button)`
 //   position: absolute;
