@@ -39,10 +39,18 @@ export const CardItems = ({ advert }) => {
   );
 };
 
-CardItems.propTypes = {
-  contact: PropTypes.exact({
-    name: PropTypes.string,
-    number: PropTypes.string,
-    id: PropTypes.string,
-  }).isRequired,
-};
+// CardItems.propTypes = {
+//   advert: PropTypes.exact({
+//     name: PropTypes.string,
+//     number: PropTypes.string,
+//     id: PropTypes.number.isRequired,
+//   }).isRequired,
+// };
+
+// CardItems.propTypes = {
+//   advert: PropTypes.exact({
+//     name: PropTypes.string,
+//     number: PropTypes.string,
+//     id: PropTypes.string,
+//   }).isRequired,
+// };

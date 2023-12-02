@@ -12,7 +12,7 @@ export const API_ERROR = {
     401: 'Missing header with authorization token',
   },
   getAdverts: {
-    404: 'There is no such user collection',
+    404: 'There is no such adverts in collection',
     500: 'Server error',
   },
   getContacts: {

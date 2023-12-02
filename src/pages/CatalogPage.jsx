@@ -1,13 +1,13 @@
-import { CardList, Section } from 'components';
+import { CardList, Section, WrapPage } from 'components';
 
 const CatalogPage = () => {
   return (
-    <main>
-      <Section title="Phonebook"></Section>
+    <WrapPage>
+      {/* <Section title="Filter"></Section> */}
       <Section title="Adverts">
         <CardList />
       </Section>
-    </main>
+    </WrapPage>
   );
 };
 export default CatalogPage;

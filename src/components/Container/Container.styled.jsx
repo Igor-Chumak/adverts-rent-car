@@ -1,11 +1,23 @@
 import styled from 'styled-components';
 
+export const WrapPage = styled.main`
+  max-height: calc(100vh - 65px);
+  /* max-height: 100%; */
+  position: relative;
+  /* margin-top: 65px; */
+  top: 65px;
+  overflow-y: scroll;
+  /* padding-top: 77px; */
+  /* outline: 1px solid yellow; */
+`;
+
 export const Container = styled.div`
   /* position: relative; */
   max-width: 1200px;
+  /* max-width: 100%; */
 
-  padding-left: ${props => props.theme.spacing(5)};
-  padding-right: ${props => props.theme.spacing(5)};
+  padding-left: ${props => props.theme.spacing(2)};
+  padding-right: ${props => props.theme.spacing(2)};
 
   margin-left: auto;
   margin-right: auto;

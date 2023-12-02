@@ -37,7 +37,7 @@ export const handleRejected = (state, action) => {
       console.log('adverts/fetch.get:>> ', action.payload.status);
       state.error = {
         ...action.payload,
-        ...{ message: API_ERROR.refresh[action.payload.status] },
+        ...{ message: API_ERROR.getAdverts[action.payload.status] },
       };
       break;
     case 'contacts/fetch.get/rejected':

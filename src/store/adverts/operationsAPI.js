@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-const API_KEY = '656a28e6de53105b0dd8376esun';
+const API_KEY = '656a28e6de53105b0dd8376e';
 const PATHNAME = 'adverts/';
 axios.defaults.baseURL = `https://${API_KEY}.mockapi.io/`;
 axios.defaults.headers = {};
