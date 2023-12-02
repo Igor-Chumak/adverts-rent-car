@@ -3,7 +3,7 @@ import { ContainerPage } from 'components';
 const FavoritesPage = () => {
   return (
     <ContainerPage>
-      <p>This is Favorites Page</p>
+      <h1>This is Favorites Page</h1>
     </ContainerPage>
   );
 };

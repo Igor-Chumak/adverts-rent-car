@@ -10,6 +10,7 @@ export const Navigation = () => {
         Home
       </NavLinkStyled>
       {isLoggedIn && <NavLinkStyled to="/catalog">Catalog</NavLinkStyled>}
+      {isLoggedIn && <NavLinkStyled to="/favorites">Favorites</NavLinkStyled>}
     </nav>
   );
 };

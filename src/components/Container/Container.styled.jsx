@@ -14,6 +14,7 @@ export const Container = styled.div`
 
 export const ContainerPage = styled(Container)`
   height: calc(100vh - 77px);
+  padding-top: 77px;
   display: flex;
   flex-direction: column;
   justify-content: center;
