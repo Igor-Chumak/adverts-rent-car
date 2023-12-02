@@ -5,13 +5,14 @@ import {
   // selectVisibleAdverts,
   selectAdverts,
 } from 'store';
-import { CardItems } from 'components';
+import { CardItem } from 'components';
 import { CardsListBox, CardsListNoItems } from './CardsList.styled';
 
 export const CardList = () => {
   const dispatch = useDispatch();
   // const advertsToList = useSelector(selectVisibleAdverts);
   const advertsToList = useSelector(selectAdverts);
+
   useEffect(() => {
     dispatch(api.getAdvertThunk());
   }, [dispatch]);
@@ -24,7 +25,7 @@ export const CardList = () => {
         </CardsListNoItems>
       )}
       {advertsToList.map(advert => (
-        <CardItems advert={advert} key={advert.id} />
+        <CardItem advert={advert} key={advert.id} />
       ))}
     </CardsListBox>
   );

@@ -12,10 +12,10 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { api } from 'store';
 
-export const Modal = ({ contactEdit, handleCloseModal }) => {
+export const Modal = ({ advertDetail, handleCloseModal }) => {
   const dispatch = useDispatch();
 
-  const { name, number, id } = contactEdit;
+  const { name, number, id } = advertDetail;
   const [nameEdit, setNameEdit] = useState(name);
   // const [numberEdit, setNumberEdit] = useState(number);
 

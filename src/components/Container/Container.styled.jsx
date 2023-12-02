@@ -6,7 +6,7 @@ export const WrapPage = styled.main`
   position: relative;
   /* margin-top: 65px; */
   top: 65px;
-  overflow-y: scroll;
+  overflow-y: auto;
   /* padding-top: 77px; */
   /* outline: 1px solid yellow; */
 `;

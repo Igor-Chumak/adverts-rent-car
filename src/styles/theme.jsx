@@ -61,11 +61,11 @@ export const darkTheme = {
   //   `linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),           url(${bgimage}) no-repeat top left/cover`,
   // ],
   body: '#121417',
-  textColor: '#edebe8', // #edebe8 rgb(237,235,232)
+  textColor: 'rgb(237,235,232)', // #edebe8
 };
 
 export const lightTheme = {
   // body: [`url(${bgimage}) no-repeat top left/cover`],
   body: '#ffffff',
-  textColor: '#121417', // #121417 rgb(18, 20, 23)
+  textColor: 'rgb(18, 20, 23)', // #121417
 };

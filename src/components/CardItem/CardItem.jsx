@@ -1,15 +1,37 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { api, selectIsLoading } from 'store';
-import { BtnItem } from 'components';
-import { BtnWrap, CardItem } from './CardItem.styled';
+import {
+  // useDispatch,
+  useSelector,
+} from 'react-redux';
+import { selectIsLoading } from 'store';
+import { Button } from 'components';
+import { CardWrap, ImgWrap, InfoName, InfoWrap } from './CardItem.styled';
 import { Modal } from 'components/Modal/Modal';
 
-export const CardItems = ({ advert }) => {
-  const { name, number, id } = advert;
+import DEFAULT_PHOTO from 'images/no_photo.jpg';
+
+export const CardItem = ({ advert }) => {
+  const {
+    id,
+    year,
+    make,
+    model = '',
+    type = '',
+    img: imgURL,
+    description = '',
+    fuelConsumption = '',
+    engineSize = '',
+    accessories = [],
+    functionalities = [],
+    rentalPrice = '',
+    rentalCompany = '',
+    address = '',
+    rentalConditions = '',
+    mileage = 0,
+  } = advert;
   const [openEditModal, setOpenEditModal] = useState(false);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const isLoading = useSelector(selectIsLoading);
 
@@ -19,27 +41,38 @@ export const CardItems = ({ advert }) => {
 
   return (
     <>
-      <CardItem>
-        {name} : {number}
-        <BtnWrap>
-          <BtnItem
-            type="button"
-            id={id}
-            onClick={() => setOpenEditModal(advert)}
-            disabled={isLoading}
-          >
-            Edit
-          </BtnItem>
-        </BtnWrap>
-      </CardItem>
+      <CardWrap>
+        <ImgWrap>
+          <img
+            src={imgURL ? `${imgURL}` : DEFAULT_PHOTO}
+            alt={`${make} ${model} id:${id}`}
+            width={274}
+          />
+        </ImgWrap>
+        <InfoWrap>
+          <InfoName>
+            <p>
+              {make} <span>{model}</span>, {year}
+            </p>
+          </InfoName>
+        </InfoWrap>
+        <Button
+          type="button"
+          id={id}
+          onClick={() => setOpenEditModal(advert)}
+          disabled={isLoading}
+        >
+          Learn more
+        </Button>
+      </CardWrap>
       {openEditModal && (
-        <Modal contactEdit={advert} handleCloseModal={handleCloseEditModal} />
+        <Modal advertDetail={advert} handleCloseModal={handleCloseEditModal} />
       )}
     </>
   );
 };
 
-// CardItems.propTypes = {
+// CardItem.propTypes = {
 //   advert: PropTypes.exact({
 //     name: PropTypes.string,
 //     number: PropTypes.string,
@@ -47,7 +80,7 @@ export const CardItems = ({ advert }) => {
 //   }).isRequired,
 // };
 
-// CardItems.propTypes = {
+// CardItem.propTypes = {
 //   advert: PropTypes.exact({
 //     name: PropTypes.string,
 //     number: PropTypes.string,
