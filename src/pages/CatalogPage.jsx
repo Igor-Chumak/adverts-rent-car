@@ -1,6 +1,6 @@
 import { Section, ContactForm, ContactList, Filter } from 'components';
 
-const ContactsPage = () => {
+const CatalogPage = () => {
   return (
     <main>
       <Section title="Phonebook">
@@ -13,4 +13,4 @@ const ContactsPage = () => {
     </main>
   );
 };
-export default ContactsPage;
+export default CatalogPage;

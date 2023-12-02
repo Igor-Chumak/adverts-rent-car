@@ -15,7 +15,4 @@ export * from 'components/Layouts/SharedLayout';
 export * from 'components/Navigation/Navigation';
 export * from 'components/UserMenu/UserMenu';
 export * from 'components/AuthNav/AuthNav';
-export * from 'components/Guards/PrivateRoute';
-export * from 'components/RegisterForm/RegisterForm';
-export * from 'components/LogInForm/LogInForm';
 export * from 'components/Guards/RestrictedRoute';

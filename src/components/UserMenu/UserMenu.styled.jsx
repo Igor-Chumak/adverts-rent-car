@@ -12,6 +12,9 @@ export const Wrapper = styled.div`
 
 export const UserName = styled.p`
   margin: 0;
+  &:last-child {
+    margin-right: ${props => props.theme.spacing(30)};
+  }
 `;
 
 export const ButtonLogOut = styled.button`

@@ -10,7 +10,7 @@ const HomePage = () => {
           marginTop: 'auto',
         }}
       >
-        Welcome to Adverts rent car
+        Welcome to Adverts rent a car
       </h1>
       <p
         style={{

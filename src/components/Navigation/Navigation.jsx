@@ -9,7 +9,7 @@ export const Navigation = () => {
       <NavLinkStyled to="/" end>
         Home
       </NavLinkStyled>
-      {isLoggedIn && <NavLinkStyled to="/contacts">Contacts</NavLinkStyled>}
+      {isLoggedIn && <NavLinkStyled to="/catalog">Catalog</NavLinkStyled>}
     </nav>
   );
 };

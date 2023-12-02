@@ -6,16 +6,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { useEffect } from 'react';
 import { auth } from 'store';
 import { useAuth } from 'hooks';
-import {
-  Loader,
-  PrivateRoute,
-  RestrictedRoute,
-  SharedLayout,
-} from 'components';
-const HomePage = lazy(() => import('pages/HomePage'));
-const RegisterPage = lazy(() => import('pages/RegisterPage'));
-const LoginPage = lazy(() => import('pages/LoginPage'));
-const ContactsPage = lazy(() => import('pages/ContactsPage'));
+import { Loader, RestrictedRoute, SharedLayout } from 'components';
 Notify.init({
   width: '500px',
   fontSize: '20px',
@@ -38,6 +29,10 @@ Notify.init({
   },
 });
 
+const HomePage = lazy(() => import('pages/HomePage'));
+const CatalogPage = lazy(() => import('pages/CatalogPage'));
+const FavoritesPage = lazy(() => import('pages/FavoritesPage'));
+
 export const App = () => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
@@ -57,33 +52,30 @@ export const App = () => {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
           <Route
-            path="/register"
+            path="/catalog"
             element={
               <RestrictedRoute
-                redirectTo="/contacts"
-                component={<RegisterPage />}
+                redirectTo="/catalog"
+                component={<CatalogPage />}
               />
             }
           />
           <Route
-            path="/login"
+            path="/favorites"
             element={
               <RestrictedRoute
-                redirectTo="/contacts"
-                component={<LoginPage />}
+                redirectTo="/catalog"
+                component={<FavoritesPage />}
               />
-            }
-          />
-          <Route
-            path="/contacts"
-            element={
-              <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
             }
           />
           <Route
             path="*"
             element={
-              <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
+              <RestrictedRoute
+                redirectTo="/catalog"
+                component={<CatalogPage />}
+              />
             }
           />
         </Route>
