@@ -10,29 +10,30 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import { LOCAL_STORAGE_KEY } from 'store/contacts/constants';
+import { LOCAL_STORAGE_KEY } from 'store/constants';
 import { sortbyReducer } from './contacts/sortbySlice';
-import { contactsReducer } from './contacts/contactsSlice';
+// import { contactsReducer } from './contacts/contactsSlice';
 import { modeThemeReducer } from './theme/themeSlice';
 import { filterReducer } from './contacts/filterSlice';
-import { authReducer } from './auth/authSlice';
+import { advertsReducer } from './adverts/advertsSlice';
 
 const themePersistConfig = {
   key: LOCAL_STORAGE_KEY + '_theme',
   storage,
 };
 
-const authPersistConfig = {
-  key: LOCAL_STORAGE_KEY + '_auth',
-  storage,
-  whitelist: ['token'],
-};
+// const refreshPersistConfig = {
+//   key: LOCAL_STORAGE_KEY + '_refresh',
+//   storage,
+//   whitelist: ['refresh'],
+// };
 
 export const store = configureStore({
   reducer: {
-    auth: persistReducer(authPersistConfig, authReducer),
+    // refresh: persistReducer(refreshPersistConfig, refreshReducer),
     theme: persistReducer(themePersistConfig, modeThemeReducer),
-    contacts: contactsReducer,
+    // contacts: contactsReducer,
+    adverts: advertsReducer,
     filter: filterReducer,
     sortby: sortbyReducer,
   },

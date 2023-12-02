@@ -1,14 +1,11 @@
-import { Section, ContactForm, ContactList, Filter } from 'components';
+import { CardList, Section } from 'components';
 
 const CatalogPage = () => {
   return (
     <main>
-      <Section title="Phonebook">
-        <ContactForm />
-      </Section>
-      <Section title="Contacts">
-        <Filter />
-        <ContactList />
+      <Section title="Phonebook"></Section>
+      <Section title="Adverts">
+        <CardList />
       </Section>
     </main>
   );

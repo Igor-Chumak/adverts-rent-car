@@ -9,13 +9,11 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     /* margin: 0; */
-     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-      'Helvetica Neue', sans-serif;
+     font-family: -apple-system, BlinkMacSystemFont, 'Manrope', 'Roboto',sans-serif;
     /* background: ${theme.colors.mainBackground}; */
     /* max-height: 100vh; */
-    height: 100vh;
     font-style: normal;
+    height: 100vh;
   }
 
 /* for change theme  */

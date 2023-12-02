@@ -10,14 +10,14 @@ import {
 } from 'components/ContactForm/ContactForm.styled';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { api1 as api } from 'store';
+import { api } from 'store';
 
 export const Modal = ({ contactEdit, handleCloseModal }) => {
   const dispatch = useDispatch();
 
   const { name, number, id } = contactEdit;
   const [nameEdit, setNameEdit] = useState(name);
-  const [numberEdit, setNumberEdit] = useState(number);
+  // const [numberEdit, setNumberEdit] = useState(number);
 
   const onClickOverlay = e => {
     if (e.target === e.currentTarget) {
@@ -39,8 +39,8 @@ export const Modal = ({ contactEdit, handleCloseModal }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const updateContact = { name: nameEdit, number: numberEdit, id };
-    dispatch(api.updateContactThunk(updateContact));
+    // const updateContact = { name: nameEdit, number: numberEdit, id };
+    // dispatch(api.updateContactThunk(updateContact));
     handleCloseModal('');
   };
 
@@ -62,21 +62,6 @@ export const Modal = ({ contactEdit, handleCloseModal }) => {
                 required
                 value={nameEdit}
                 onChange={e => setNameEdit(e.target.value)}
-              />
-            </ContactFormLabel>
-            <ContactFormLabel>
-              Number
-              <ContactFormInput
-                type="tel"
-                name="number"
-                minLength="7"
-                maxLength="17"
-                pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
-                title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-                placeholder=""
-                required
-                value={numberEdit}
-                onChange={e => setNumberEdit(e.target.value)}
               />
             </ContactFormLabel>
             <ContactFormSubmit type="submit">UpDate</ContactFormSubmit>

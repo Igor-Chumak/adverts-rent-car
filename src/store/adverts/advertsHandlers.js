@@ -1,26 +1,26 @@
 import { API_ERROR } from '../constants';
 
-export const handleGetContacts = (state, action) => {
+export const handleGetAdverts = (state, action) => {
   // state.isLoading = false;
   state.items = action.payload;
 };
 
-export const handleAddContact = (state, action) => {
-  // state.isLoading = false;
-  state.items.unshift(action.payload);
-};
+// export const handleAddAdvert = (state, action) => {
+//   // state.isLoading = false;
+//   state.items.unshift(action.payload);
+// };
 
-export const handleUpdateContact = (state, action) => {
-  // state.isLoading = false;
-  const index = state.items.findIndex(item => item.id === action.payload.id);
-  state.items[index] = action.payload;
-};
+// export const handleUpdateAdvert = (state, action) => {
+//   // state.isLoading = false;
+//   const index = state.items.findIndex(item => item.id === action.payload.id);
+//   state.items[index] = action.payload;
+// };
 
-export const handleDeleteContact = (state, action) => {
-  // state.isLoading = false;
-  const index = state.items.findIndex(item => item.id === action.payload.id);
-  state.items.splice(index, 1);
-};
+// export const handleDeleteAdvert = (state, action) => {
+//   // state.isLoading = false;
+//   const index = state.items.findIndex(item => item.id === action.payload.id);
+//   state.items.splice(index, 1);
+// };
 
 export const handlePending = state => {
   state.isLoading = true;
@@ -29,36 +29,15 @@ export const handlePending = state => {
 };
 
 export const handleRejected = (state, action) => {
-  console.log('Contacts handler rejected :>> ', action);
+  console.log('Adverts handler rejected :>> ', action);
   state.isLoading = false;
   // state.error = action.payload;
   switch (action.type) {
-    case 'auth/refresh/rejected':
-      console.log('auth/refresh :>> ', action.payload.status);
+    case 'adverts/fetch.get/rejected':
+      console.log('adverts/fetch.get:>> ', action.payload.status);
       state.error = {
         ...action.payload,
         ...{ message: API_ERROR.refresh[action.payload.status] },
-      };
-      break;
-    case 'auth/register/rejected':
-      console.log('auth/register :>> ', action.payload.status);
-      state.error = {
-        ...action.payload,
-        ...{ message: API_ERROR.signup[action.payload.status] },
-      };
-      break;
-    case 'auth/login/rejected':
-      console.log('auth/login :>> ', action.payload.status);
-      state.error = {
-        ...action.payload,
-        ...{ message: API_ERROR.login[action.payload.status] },
-      };
-      break;
-    case 'auth/logout/rejected':
-      console.log('auth/logout :>> ', action.payload.status);
-      state.error = {
-        ...action.payload,
-        ...{ message: API_ERROR.logout[action.payload.status] },
       };
       break;
     case 'contacts/fetch.get/rejected':

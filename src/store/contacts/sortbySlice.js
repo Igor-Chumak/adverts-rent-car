@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { SORT_BY } from './constants';
+import { SORT_BY } from '../constants';
 
 const sortbySlice = createSlice({
   name: 'sortby',

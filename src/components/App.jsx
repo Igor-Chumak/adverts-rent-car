@@ -1,11 +1,14 @@
 import { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import {
+  // useDispatch,
+  useSelector,
+} from 'react-redux';
 import { selectIsLoading, selectError } from 'store';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { useEffect } from 'react';
-import { auth } from 'store';
-import { useAuth } from 'hooks';
+// import { useEffect } from 'react';
+// import { auth } from 'store';
+// import { useAuth } from 'hooks';
 import { Loader, RestrictedRoute, SharedLayout } from 'components';
 Notify.init({
   width: '500px',
@@ -37,12 +40,13 @@ export const App = () => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
 
-  const dispatch = useDispatch();
-  const { isRefreshing } = useAuth();
+  // const dispatch = useDispatch();
+  // const { isRefreshing } = useAuth();
+  const isRefreshing = false;
 
-  useEffect(() => {
-    dispatch(auth.refreshUser());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(auth.refreshUser());
+  // }, [dispatch]);
 
   return isRefreshing ? (
     <Loader />

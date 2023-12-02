@@ -1,4 +1,4 @@
-export const LOCAL_STORAGE_KEY = 'phonebook';
+export const LOCAL_STORAGE_KEY = 'rentcar';
 
 export const SORT_BY = {
   NONE: 'none',
@@ -11,15 +11,8 @@ export const API_ERROR = {
     101: 'Unable to fetch user',
     401: 'Missing header with authorization token',
   },
-  login: {
-    400: 'Login: error in e-mail or password ',
-  },
-  signup: {
-    400: 'User creation error',
-    500: 'Server error',
-  },
-  logout: {
-    401: 'Missing header with authorization token',
+  getAdverts: {
+    404: 'There is no such user collection',
     500: 'Server error',
   },
   getContacts: {

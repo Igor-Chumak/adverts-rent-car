@@ -1,5 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { SORT_BY } from './constants';
+import { SORT_BY } from '../constants';
 
 export const selectContacts = state => state.contacts.items;
 
