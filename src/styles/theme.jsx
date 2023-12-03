@@ -14,6 +14,7 @@ export const theme = Object.freeze({
     // title: '#3f0101',
     accent: '#3470FF',
     hover: '#0B44CD',
+    borderInfo: 'rgba(18, 20, 23, 0.1)',
   },
 
   fontSizes: {

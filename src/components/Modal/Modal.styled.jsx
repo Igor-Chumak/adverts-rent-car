@@ -42,6 +42,23 @@ export const BtnClose = styled.button`
   opacity: 80%;
 `;
 
+export const InfoWrap = styled.div`
+  width: 100%;
+  & > div {
+    margin-bottom: ${props => props.theme.spacing(1)}; // 4px;
+  }
+  & > div:first-child {
+    margin-bottom: ${props => props.theme.spacing(3.5)}; // 14px;
+  }
+  & > div:nth-child(2) {
+    margin-bottom: ${props => props.theme.spacing(2)}; // 8px;
+  }
+  & > p:last-child {
+    margin-top: 14px;
+  }
+  outline: 1px solid red;
+`;
+
 export const ImgWrap = styled.div`
   position: relative;
   margin-bottom: ${props => props.theme.spacing(3.5)}; // 14px;
@@ -60,8 +77,8 @@ export const ImgWrap = styled.div`
 `;
 
 export const InfoName = styled.div`
-  margin-bottom: ${props => props.theme.spacing(2)}; // 8px;
-  max-width: 277;
+  /* margin-bottom: ${props => props.theme.spacing(2)}; // 8px; */
+  max-width: ${props => props.theme.spacing(69.25)}; // 277px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -75,5 +92,13 @@ export const InfoName = styled.div`
   & span {
     color: ${props => props.theme.colors.accent};
   }
+  outline: 1px solid blue;
+`;
+
+export const Text = styled.p`
+  width: 100%;
+  font-weight: ${props => props.theme.fontWeight.regular};
+  font-size: ${props => props.theme.fontSizes.small};
+  line-height: 1.43;
   outline: 1px solid blue;
 `;

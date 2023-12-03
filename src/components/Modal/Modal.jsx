@@ -10,8 +10,12 @@ import {
   BtnClose,
   ImgWrap,
   InfoName,
+  InfoWrap,
+  Text,
+  // InfoLine,
 } from './Modal.styled';
 import DEFAULT_PHOTO from 'images/no_photo.jpg';
+import { InfoLine } from 'components/CardItem/CardItem.styled';
 // import { ReactComponent as IconBtnClose } from 'images/x.svg';
 
 export const Modal = ({ advert, handleCloseModal }) => {
@@ -66,7 +70,7 @@ export const Modal = ({ advert, handleCloseModal }) => {
         <BtnClose type="button" id={id} onClick={handleSubmit}>
           X{/* <IconBtnClose /> */}
         </BtnClose>
-        <div>
+        <InfoWrap>
           <ImgWrap>
             <img
               src={imgURL ? `${imgURL}` : DEFAULT_PHOTO}
@@ -78,7 +82,19 @@ export const Modal = ({ advert, handleCloseModal }) => {
               {make} <span>{model}</span>, {year}
             </p>
           </InfoName>
-        </div>
+          <InfoLine>
+            <p>{address ? address.split(',')[1] : ''}</p>
+            <p>{address ? address.split(',')[2] : ''}</p>
+            <p>Id: {id}</p>
+            <p>Year: {year}</p>
+            <p>Type: {type}</p>
+          </InfoLine>
+          <InfoLine>
+            <p>Fuel Consumption: {fuelConsumption}</p>
+            <p>Engine Size: {engineSize}</p>
+          </InfoLine>
+          <Text>{description}</Text>
+        </InfoWrap>
       </ModalWrapper>
     </Overlay>,
     document.querySelector('#root_modal')
