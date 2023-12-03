@@ -16,7 +16,6 @@ import {
   RentalWrap,
   RentalLineWrap,
   AccessFuncWrap,
-  // InfoLine,
 } from './Modal.styled';
 import DEFAULT_PHOTO from 'images/no_photo.jpg';
 import { InfoLine } from 'components/CardItem/CardItem.styled';
