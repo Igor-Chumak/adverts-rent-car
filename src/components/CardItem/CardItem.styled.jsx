@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const CardWrap = styled.li`
   /* padding-bottom: ${props => props.theme.spacing(1)}; */
-  max-width: 274px;
+  width: 274px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -26,20 +26,33 @@ export const ImgWrap = styled.div`
   align-items: center;
   justify-content: center;
   & > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
     border-radius: 14px;
   }
   outline: 1px solid blue;
 `;
 
-export const SvgFavorite = styled.svg`
+export const SvgFavorite = styled.button`
   position: absolute;
   top: 14px;
   right: 14px;
   width: 18px;
   height: 18px;
-  /* stroke: ${props => props.theme.colors.dark};
-  fill: ${props => props.theme.colors.dark}; */
+  /* stroke: ${props => props.theme.colors.white};
+  fill: ${props => props.theme.colors.white}; */
 `;
+
+// export const SvgFavorite = styled.svg`
+//   position: absolute;
+//   top: 14px;
+//   right: 14px;
+//   width: 18px;
+//   height: 18px;
+//   stroke: ${props => props.theme.colors.white};
+//   fill: ${props => props.theme.colors.white};
+// `;
 
 export const InfoWrap = styled.div`
   margin-bottom: 28px;

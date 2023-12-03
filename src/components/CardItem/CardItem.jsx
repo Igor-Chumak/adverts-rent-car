@@ -18,7 +18,8 @@ import {
 import { Modal } from 'components/Modal/Modal';
 
 import DEFAULT_PHOTO from 'images/no_photo.jpg';
-import IconFavorite from 'images/favorite1.svg';
+import iconNoFavorite from 'images/no_favorite.svg';
+// import iconFavorite from 'images/favorite.svg';
 
 export const CardItem = ({ advert }) => {
   const {
@@ -27,7 +28,7 @@ export const CardItem = ({ advert }) => {
     make,
     model = '',
     type = '',
-    img: imgURL,
+    img: imgURL = '',
     // description = '',
     // fuelConsumption = '',
     // engineSize = '',
@@ -57,8 +58,13 @@ export const CardItem = ({ advert }) => {
             alt={`${make} ${model} id:${id}`}
             width={274}
           />
-          <SvgFavorite>
-            <use href={IconFavorite} width={24} height={24} />
+          <SvgFavorite
+            type="button"
+            id={id}
+            onClick={() => setOpenEditModal(advert)}
+            disabled={isLoading}
+          >
+            <img src={iconNoFavorite} alt="" />
           </SvgFavorite>
         </ImgWrap>
         <InfoWrap>
