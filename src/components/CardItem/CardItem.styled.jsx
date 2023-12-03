@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const CardWrap = styled.li`
-  /* padding-bottom: ${props => props.theme.spacing(1)}; */
-  width: 274px;
+  width: ${props => props.theme.spacing(68.5)}; // 274px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -39,7 +38,7 @@ export const InfoWrap = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: ${props => props.theme.spacing(2)}; // 8px;
   color: inherit;
 `;
 

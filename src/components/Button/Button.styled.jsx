@@ -26,7 +26,7 @@ export const BtnRental = styled(Button)`
 export const BtnLoadMore = styled.button`
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
+  margin-bottom: ${props => props.theme.spacing(12.5)}; //50px;
   display: block;
   color: ${props => props.theme.colors.accent};
   font-weight: ${props => props.theme.fontWeight.medium};

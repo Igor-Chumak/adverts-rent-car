@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-// import PropTypes from 'prop-types';
-// import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import { numberToDivide } from 'utilities/number_to_divide';
 import {
@@ -22,7 +20,6 @@ import { InfoLine } from 'components/CardItem/CardItem.styled';
 import { BtnRental } from 'components';
 
 export const Modal = ({ advert, handleCloseModal }) => {
-  // const dispatch = useDispatch();
   const {
     id,
     year,
@@ -131,11 +128,23 @@ export const Modal = ({ advert, handleCloseModal }) => {
   );
 };
 
-// ModalWrapper.propTypes = {
-//   handleCloseModal: PropTypes.func,
-//   contactEdit: PropTypes.exact({
-//     name: PropTypes.string,
-//     number: PropTypes.string,
-//     id: PropTypes.string,
-//   }),
-// };
+ModalWrapper.propTypes = {
+  handleCloseModal: PropTypes.func,
+  advert: PropTypes.exact({
+    id: PropTypes.string.isRequired,
+    year: PropTypes.number.isRequired,
+    make: PropTypes.string.isRequired,
+    model: PropTypes.string,
+    type: PropTypes.string,
+    img: PropTypes.string,
+    description: PropTypes.string,
+    fuelConsumption: PropTypes.string,
+    engineSize: PropTypes.string,
+    accessories: PropTypes.array,
+    functionalities: PropTypes.array,
+    rentalPrice: PropTypes.string,
+    address: PropTypes.string,
+    rentalConditions: PropTypes.string,
+    mileage: PropTypes.number,
+  }),
+};

@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import {
   // useDispatch,
@@ -97,10 +97,17 @@ export const CardItem = ({ advert }) => {
   );
 };
 
-// CardItem.propTypes = {
-//   advert: PropTypes.exact({
-//     name: PropTypes.string,
-//     number: PropTypes.string,
-//     id: PropTypes.number.isRequired,
-//   }).isRequired,
-// };
+CardItem.propTypes = {
+  advert: PropTypes.exact({
+    id: PropTypes.string.isRequired,
+    year: PropTypes.number.isRequired,
+    make: PropTypes.string.isRequired,
+    model: PropTypes.string,
+    type: PropTypes.string,
+    img: PropTypes.string,
+    accessories: PropTypes.array,
+    rentalPrice: PropTypes.string,
+    rentalCompany: PropTypes.string,
+    address: PropTypes.string,
+  }),
+};
