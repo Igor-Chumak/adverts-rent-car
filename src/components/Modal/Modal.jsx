@@ -4,7 +4,13 @@ import { createPortal } from 'react-dom';
 // import { useState } from 'react';
 // import { useDispatch } from 'react-redux';
 
-import { Overlay, ModalWrapper, BtnClose, ImgWrap } from './Modal.styled';
+import {
+  Overlay,
+  ModalWrapper,
+  BtnClose,
+  ImgWrap,
+  InfoName,
+} from './Modal.styled';
 import DEFAULT_PHOTO from 'images/no_photo.jpg';
 // import { ReactComponent as IconBtnClose } from 'images/x.svg';
 
@@ -60,12 +66,19 @@ export const Modal = ({ advert, handleCloseModal }) => {
         <BtnClose type="button" id={id} onClick={handleSubmit}>
           X{/* <IconBtnClose /> */}
         </BtnClose>
-        <ImgWrap>
-          <img
-            src={imgURL ? `${imgURL}` : DEFAULT_PHOTO}
-            alt={`${make} ${model} id:${id}`}
-          />
-        </ImgWrap>
+        <div>
+          <ImgWrap>
+            <img
+              src={imgURL ? `${imgURL}` : DEFAULT_PHOTO}
+              alt={`${make} ${model} id:${id}`}
+            />
+          </ImgWrap>
+          <InfoName>
+            <p>
+              {make} <span>{model}</span>, {year}
+            </p>
+          </InfoName>
+        </div>
       </ModalWrapper>
     </Overlay>,
     document.querySelector('#root_modal')

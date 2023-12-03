@@ -28,16 +28,15 @@ export const ModalWrapper = styled.div`
   background-color: ${props => props.theme.body};
   border-radius: ${props => props.theme.spacing(6)};
   border-color: ${props => props.theme.colors.white};
-  /* border: 1px solid; */
   outline: 1px solid;
 `;
 
 export const BtnClose = styled.button`
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 24px;
-  height: 24px;
+  top: ${props => props.theme.spacing(4)}; // 16px;
+  right: ${props => props.theme.spacing(4)}; // 16px;
+  width: ${props => props.theme.spacing(6)}; // 24px;
+  height: ${props => props.theme.spacing(6)}; // 24px;
   font-weight: ${props => props.theme.fontWeight.regular};
   font-size: ${props => props.theme.fontSizes.largest};
   opacity: 80%;
@@ -45,9 +44,9 @@ export const BtnClose = styled.button`
 
 export const ImgWrap = styled.div`
   position: relative;
-  margin-bottom: 14px;
+  margin-bottom: ${props => props.theme.spacing(3.5)}; // 14px;
   width: 100%;
-  height: 248px;
+  height: ${props => props.theme.spacing(62)}; //248px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,6 +55,25 @@ export const ImgWrap = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 14px;
+  }
+  outline: 1px solid blue;
+`;
+
+export const InfoName = styled.div`
+  margin-bottom: ${props => props.theme.spacing(2)}; // 8px;
+  max-width: 277;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: ${props => props.theme.fontWeight.medium};
+  font-size: ${props => props.theme.fontSizes.large};
+  line-height: 1.33;
+  white-space: nowrap;
+  overflow: hidden;
+  & span {
+    color: ${props => props.theme.colors.accent};
   }
   outline: 1px solid blue;
 `;
