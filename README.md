@@ -15,7 +15,7 @@ service https://mockapi.io/.
 
 This project was created with the help of
 
-- React
+- React with React Router
 - Redux Tool Kit
 - Redux Persist
 - PropTypes
