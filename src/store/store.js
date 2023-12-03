@@ -11,10 +11,9 @@ import {
   REGISTER,
 } from 'redux-persist';
 import { LOCAL_STORAGE_KEY } from 'store/constants';
-import { sortbyReducer } from './contacts/sortbySlice';
-// import { contactsReducer } from './contacts/contactsSlice';
+import { sortbyReducer } from './filter/sortbySlice';
 import { modeThemeReducer } from './theme/themeSlice';
-import { filterReducer } from './contacts/filterSlice';
+import { filterReducer } from './filter/filterSlice';
 import { advertsReducer } from './adverts/advertsSlice';
 
 const themePersistConfig = {
@@ -32,7 +31,6 @@ export const store = configureStore({
   reducer: {
     // refresh: persistReducer(refreshPersistConfig, refreshReducer),
     theme: persistReducer(themePersistConfig, modeThemeReducer),
-    // contacts: contactsReducer,
     adverts: advertsReducer,
     filter: filterReducer,
     sortby: sortbyReducer,

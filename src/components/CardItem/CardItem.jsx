@@ -51,7 +51,6 @@ export const CardItem = ({ advert }) => {
           <img
             src={imgURL ? `${imgURL}` : DEFAULT_PHOTO}
             alt={`${make} ${model} id:${id}`}
-            // width={274}
           />
           <SvgFavorite
             type="button"

@@ -12,7 +12,6 @@ export const CardsListBox = styled.ul`
   align-items: flex-start;
   row-gap: ${props => props.theme.spacing(12.5)};
   column-gap: ${props => props.theme.spacing(7.25)};
-  /* flex-basis: ${props => props.theme.spacing(68.5)}; // 274px; */
 `;
 
 export const CardsListNoItems = styled.h3`

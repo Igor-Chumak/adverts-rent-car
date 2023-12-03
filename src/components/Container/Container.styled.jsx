@@ -4,10 +4,8 @@ export const WrapPage = styled.main`
   max-height: calc(100vh - 60px);
   /* max-height: 100%; */
   position: relative;
-  /* margin-top: 65px; */
   top: 60px;
   overflow-y: auto;
-  /* padding-top: 77px; */
   /* outline: 1px solid yellow; */
 `;
 
