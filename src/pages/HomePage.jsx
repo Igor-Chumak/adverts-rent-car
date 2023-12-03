@@ -1,6 +1,8 @@
-import { WrapHomePage } from 'components';
+import { BtnHome, WrapHomePage } from 'components';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+  const navigate = useNavigate();
   return (
     <main>
       <WrapHomePage>
@@ -25,6 +27,14 @@ const HomePage = () => {
           Convenient, fast and comfortable. No mileage restrictions. CASCO
           insurance is included in the price.
         </p>
+        <BtnHome
+          type="button"
+          onClick={() => {
+            navigate('/catalog');
+          }}
+        >
+          Learn more
+        </BtnHome>
         <p style={{ marginTop: 'auto' }}>&#169; Igor Chumak</p>
       </WrapHomePage>
     </main>

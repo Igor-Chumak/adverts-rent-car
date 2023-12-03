@@ -9,5 +9,4 @@ export * from 'components/Button/Button.styled';
 export * from 'components/Loader/Loader';
 export * from 'components/Layouts/SharedLayout';
 export * from 'components/Navigation/Navigation';
-export * from 'components/UserMenu/UserMenu';
 export * from 'components/Guards/RestrictedRoute';

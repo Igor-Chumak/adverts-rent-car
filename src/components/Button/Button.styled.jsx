@@ -22,6 +22,28 @@ export const BtnRental = styled(Button)`
   width: ${props => props.theme.spacing(42)}; // 168
 `;
 
+export const BtnHome = styled(Button)`
+  margin-top: ${props => props.theme.spacing(15)};
+  margin-right: auto;
+  margin-left: auto;
+  width: ${props => props.theme.spacing(50)};
+  color: ${props => props.theme.colors.title};
+  font-weight: ${props => props.theme.fontWeight.semiBold};
+  font-size: ${props => props.theme.fontSizes.large};
+  text-shadow: 1px 1px 1px #ffff;
+  background-color: inherit;
+  border-color: ${props => props.theme.colors.title};
+  border: 1px solid;
+  box-shadow: 1px 1px 1px #ffff;
+  &:hover,
+  &:focus {
+    background-color: ${props => props.theme.colors.title};
+    color: ${props => props.theme.colors.white};
+    text-shadow: unset;
+    opacity: 70%;
+  }
+`;
+
 export const BtnLoadMore = styled.button`
   margin-left: auto;
   margin-right: auto;
