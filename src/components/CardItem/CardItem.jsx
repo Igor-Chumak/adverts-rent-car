@@ -18,8 +18,8 @@ import {
 import { Modal } from 'components/Modal/Modal';
 
 import DEFAULT_PHOTO from 'images/no_photo.jpg';
-import iconNoFavorite from 'images/no_favorite.svg';
-// import iconFavorite from 'images/favorite.svg';
+import { ReactComponent as IconNoFavorite } from 'images/no_favorite.svg';
+import { ReactComponent as IconFavorite } from 'images/favorite.svg';
 
 export const CardItem = ({ advert }) => {
   const {
@@ -44,6 +44,7 @@ export const CardItem = ({ advert }) => {
   // const dispatch = useDispatch();
 
   const isLoading = useSelector(selectIsLoading);
+  const favorite = true;
 
   const handleCloseEditModal = e => {
     setOpenEditModal(e);
@@ -64,7 +65,7 @@ export const CardItem = ({ advert }) => {
             onClick={() => setOpenEditModal(advert)}
             disabled={isLoading}
           >
-            <img src={iconNoFavorite} alt="" />
+            {favorite ? <IconFavorite /> : <IconNoFavorite />}
           </SvgFavorite>
         </ImgWrap>
         <InfoWrap>
@@ -107,13 +108,5 @@ export const CardItem = ({ advert }) => {
 //     name: PropTypes.string,
 //     number: PropTypes.string,
 //     id: PropTypes.number.isRequired,
-//   }).isRequired,
-// };
-
-// CardItem.propTypes = {
-//   advert: PropTypes.exact({
-//     name: PropTypes.string,
-//     number: PropTypes.string,
-//     id: PropTypes.string,
 //   }).isRequired,
 // };
