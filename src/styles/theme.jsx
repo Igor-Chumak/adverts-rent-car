@@ -10,7 +10,7 @@ export const theme = Object.freeze({
     mainBackground: ['linear-gradient(to bottom, #c9d6ff,  #e2e2e2)'],
     tagBackground: ['linear-gradient(to bottom, #FFD194, #D1913C)'],
     alert: '#ec8080',
-    title: '#002069',
+    title: 'rgb(0, 32, 105)', // #002069
     // title: '#3f0101',
     accent: '#3470FF',
     hover: '#0B44CD',
@@ -37,7 +37,8 @@ export const theme = Object.freeze({
     medium: '0 9px 47px 11px rgba(51, 51, 51, 0.18);',
     // main: '2px 3px 4px 2px rgba(20, 20, 20, 0.5)',
     // main: '2px 3px 4px 2px rgba(92, 2, 2, 0.5)',
-    main: '2px 3px 4px 0px rgba(92, 2, 2, 0.5)',
+    // main: '2px 3px 4px 0px rgba(92, 2, 2, 0.5)',
+    main: '2px 3px 4px 0px rgba(0, 32, 105, 0.6)',
     btn_vol: `inset rgba(255, 255, 255, 0.2) 8px 8px 18px 5px,
     inset rgba(0, 0, 0, 0.4) -8px -8px 18px 5px`,
     btn_vol_hover: `inset rgba(0, 0, 0, 0.4) 8px 8px 18px 5px,

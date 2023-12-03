@@ -41,10 +41,10 @@ export const CardItem = ({ advert }) => {
     // mileage = 0,
   } = advert;
   const [openEditModal, setOpenEditModal] = useState(false);
+  const [favorite, setFavorite] = useState(false);
   // const dispatch = useDispatch();
 
   const isLoading = useSelector(selectIsLoading);
-  const favorite = true;
 
   const handleCloseEditModal = e => {
     setOpenEditModal(e);
@@ -62,7 +62,7 @@ export const CardItem = ({ advert }) => {
           <SvgFavorite
             type="button"
             id={id}
-            onClick={() => setOpenEditModal(advert)}
+            onClick={() => setFavorite(!favorite)}
             disabled={isLoading}
           >
             {favorite ? <IconFavorite /> : <IconNoFavorite />}
