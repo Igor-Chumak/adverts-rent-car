@@ -1,7 +1,8 @@
 # Adverts Rent a Car Application
 
-An app for a car rental company in Ukraine. Routes are made in the application:
+An app for a car rental company in Ukraine. 
 
+Routes are made in the application:
 - "/" - the home page with a general description of the services provided by the
   company
 - "/catalogue" - a page containing a catalogue of cars of various configurations
@@ -9,12 +10,12 @@ An app for a car rental company in Ukraine. Routes are made in the application:
   the user visits a route that does not exist, he or she should be redirected to
   the home page.
 
-To work with the list of ads, we created a backend for development using the UI
+To work with the list of ads, I created a backend for development using the UI
 service https://mockapi.io/.
 
 This project was created with the help of
 
-- React
+- React with React Router
 - Redux Tool Kit
 - Redux Persist
 - PropTypes
