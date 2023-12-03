@@ -11,7 +11,6 @@ export const theme = Object.freeze({
     tagBackground: ['linear-gradient(to bottom, #FFD194, #D1913C)'],
     alert: '#ec8080',
     title: 'rgb(0, 32, 105)', // #002069
-    // title: '#3f0101',
     accent: '#3470FF',
     hover: '#0B44CD',
     borderInfo: 'rgba(18, 20, 23, 0.1)',

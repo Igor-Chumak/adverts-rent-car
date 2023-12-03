@@ -29,16 +29,10 @@ export const CardItem = ({ advert }) => {
     model = '',
     type = '',
     img: imgURL = '',
-    // description = '',
-    // fuelConsumption = '',
-    // engineSize = '',
     accessories = [],
-    // functionalities = [],
     rentalPrice = '',
     rentalCompany = '',
     address = '',
-    // rentalConditions = '',
-    // mileage = 0,
   } = advert;
   const [openEditModal, setOpenEditModal] = useState(false);
   const [favorite, setFavorite] = useState(false);

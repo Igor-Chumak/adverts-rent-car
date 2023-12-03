@@ -12,6 +12,8 @@ import {
   InfoName,
   InfoWrap,
   Text,
+  RentalWrap,
+  RentalLineWrap,
   // InfoLine,
 } from './Modal.styled';
 import DEFAULT_PHOTO from 'images/no_photo.jpg';
@@ -95,6 +97,22 @@ export const Modal = ({ advert, handleCloseModal }) => {
           </InfoLine>
           <Text>{description}</Text>
         </InfoWrap>
+        <RentalWrap>
+          <Text>Rental Conditions:</Text>
+          <RentalLineWrap>
+            <p>Minimum age : 25</p>
+            <p>Valid driver's license</p>
+          </RentalLineWrap>
+          <RentalLineWrap>
+            <p>Security deposit required</p>
+            <p>
+              Mileage: <span>5,858</span>
+            </p>
+            <p>
+              Price: <span>40$</span>
+            </p>
+          </RentalLineWrap>
+        </RentalWrap>
       </ModalWrapper>
     </Overlay>,
     document.querySelector('#root_modal')

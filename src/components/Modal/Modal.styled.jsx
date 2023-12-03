@@ -102,3 +102,23 @@ export const Text = styled.p`
   line-height: 1.43;
   outline: 1px solid blue;
 `;
+
+export const RentalWrap = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: ${props => props.theme.spacing(2)}; // 8px;
+  outline: 1px solid red;
+`;
+
+export const RentalLineWrap = styled.div`
+  width: 100%;
+  display: flex;
+  outline: 1px solid blue;
+  & > p {
+    padding: 7px 14px;
+    font-weight: ${props => props.theme.fontWeight.regular};
+    font-size: ${props => props.theme.fontSizes.smallest};
+    line-height: 1.5;
+  }
+`;
