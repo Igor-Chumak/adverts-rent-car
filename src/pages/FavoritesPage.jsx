@@ -1,19 +1,11 @@
-import {
-  Section,
-  // ContactForm,
-  // ContactList,
-  // Filter
-} from 'components';
+import { Section, WrapPage } from 'components';
 
 const FavoritesPage = () => {
   return (
-    <main>
-      <Section title="Phonebook">{/* <ContactForm /> */}</Section>
-      <Section title="Contacts">
-        {/* <Filter />
-        <ContactList /> */}
-      </Section>
-    </main>
+    <WrapPage>
+      {/* <Section title="Filter"></Section> */}
+      <Section title="Here will be Favorite Page"></Section>
+    </WrapPage>
   );
 };
 
