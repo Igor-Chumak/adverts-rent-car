@@ -4,7 +4,6 @@ export const Button = styled.button`
   display: block;
   padding-top: ${props => props.theme.spacing(3)};
   padding-bottom: ${props => props.theme.spacing(3)};
-  /* min-width: ${props => props.theme.spacing(5)}; */
   width: 100%;
   color: ${props => props.theme.colors.white};
   font-weight: ${props => props.theme.fontWeight.semiBold};
@@ -17,6 +16,11 @@ export const Button = styled.button`
   &:focus {
     background-color: ${props => props.theme.colors.hover};
   }
+`;
+
+export const BtnRental = styled(Button)`
+  margin-right: auto;
+  width: ${props => props.theme.spacing(42)}; // 168
 `;
 
 export const BtnLoadMore = styled.button`

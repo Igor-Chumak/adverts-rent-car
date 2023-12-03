@@ -20,6 +20,7 @@ import {
 } from './Modal.styled';
 import DEFAULT_PHOTO from 'images/no_photo.jpg';
 import { InfoLine } from 'components/CardItem/CardItem.styled';
+import { BtnRental } from 'components';
 
 export const Modal = ({ advert, handleCloseModal }) => {
   // const dispatch = useDispatch();
@@ -36,7 +37,6 @@ export const Modal = ({ advert, handleCloseModal }) => {
     accessories = [],
     functionalities = [],
     rentalPrice = '',
-    rentalCompany = '',
     address = '',
     rentalConditions = '',
     mileage = 0,
@@ -125,6 +125,7 @@ export const Modal = ({ advert, handleCloseModal }) => {
             </p>
           </RentalLineWrap>
         </RentalWrap>
+        <BtnRental>Rental car</BtnRental>
       </ModalWrapper>
     </Overlay>,
     document.querySelector('#root_modal')

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {} from 'components/CardItem/CardItem.styled';
 
 export const Overlay = styled.div`
   position: fixed;
@@ -56,7 +55,6 @@ export const InfoWrap = styled.div`
   & > p:last-child {
     margin-top: 14px;
   }
-  outline: 1px solid red;
 `;
 
 export const ImgWrap = styled.div`
@@ -101,7 +99,6 @@ export const Text = styled.p`
 
 export const AccessFuncWrap = styled.div`
   width: 100%;
-  outline: 1px solid red;
   & > div {
     margin-bottom: ${props => props.theme.spacing(1)}; // 4px;
   }
@@ -118,7 +115,6 @@ export const RentalWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${props => props.theme.spacing(2)}; // 8px;
-  outline: 1px solid red;
 `;
 
 export const RentalLineWrap = styled.div`
