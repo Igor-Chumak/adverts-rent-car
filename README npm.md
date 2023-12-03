@@ -7,7 +7,6 @@
 - npm install modern-normalize >>> import 'modern-normalize';
 - npm install--save-dev prop-types >>> import PropTypes from 'prop-types';
 - npm install styled-components >>> import styled from 'styled-components';
-- npm npm install --save nanoid >>> import { nanoid } from 'nanoid';
 - npm i notiflix >>> import { Notify } from'notiflix/build/notiflix-notify-aio';
   <!-- const notifyWarning = {
     width: '500px',
@@ -48,5 +47,3 @@
   - npm install --save react-spinners >>> import {}ScaleLoader from
     "react-spinners/{}ScaleLoader";
     //https://www.davidhu.io/react-spinners/storybook/?path=/docs/
-  - npm i react-recipes --save >>> import { useLocalStorage } from
-    "react-recipes";
