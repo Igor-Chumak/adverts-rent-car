@@ -89,5 +89,4 @@ export const InfoLine = styled.div`
     padding-right: 0px;
     border-right: none;
   }
-  outline: 1px solid blue;
 `;

@@ -15,11 +15,11 @@ import {
   Text,
   RentalWrap,
   RentalLineWrap,
+  AccessFuncWrap,
   // InfoLine,
 } from './Modal.styled';
 import DEFAULT_PHOTO from 'images/no_photo.jpg';
 import { InfoLine } from 'components/CardItem/CardItem.styled';
-// import { ReactComponent as IconBtnClose } from 'images/x.svg';
 
 export const Modal = ({ advert, handleCloseModal }) => {
   // const dispatch = useDispatch();
@@ -43,7 +43,6 @@ export const Modal = ({ advert, handleCloseModal }) => {
   } = advert;
 
   const rentalConditionsArray = rentalConditions.split('\n');
-  const rentalConditionsAge = rentalConditionsArray[0].split(':');
 
   const onClickOverlay = e => {
     if (e.target === e.currentTarget) {
@@ -63,18 +62,11 @@ export const Modal = ({ advert, handleCloseModal }) => {
     };
   }, [handleCloseModal]);
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    // const updateContact = { name: nameEdit, number: numberEdit, id };
-    // dispatch(api.updateContactThunk(updateContact));
-    handleCloseModal('');
-  };
-
   return createPortal(
     <Overlay onClick={onClickOverlay}>
       <ModalWrapper>
-        <BtnClose type="button" id={id} onClick={handleSubmit}>
-          X{/* <IconBtnClose /> */}
+        <BtnClose type="button" id={id} onClick={() => handleCloseModal('')}>
+          X
         </BtnClose>
         <InfoWrap>
           <ImgWrap>
@@ -101,12 +93,25 @@ export const Modal = ({ advert, handleCloseModal }) => {
           </InfoLine>
           <Text>{description}</Text>
         </InfoWrap>
-
+        <AccessFuncWrap>
+          <Text>Accessories and functionalities:</Text>
+          <InfoLine>
+            <p>{accessories[0]}</p>
+            <p>{accessories[1]}</p>
+            <p>{accessories[2]}</p>
+          </InfoLine>
+          <InfoLine>
+            <p>{functionalities[0]}</p>
+            <p>{functionalities[1]}</p>
+            <p>{functionalities[2]}</p>
+          </InfoLine>
+        </AccessFuncWrap>
         <RentalWrap>
           <Text>Rental Conditions:</Text>
           <RentalLineWrap>
             <p>
-              {rentalConditionsAge[0]}:<span>{rentalConditionsAge[1]}</span>
+              {rentalConditionsArray[0].split(':')[0]}:
+              <span>{rentalConditionsArray[0].split(':')[1]}</span>
             </p>
             <p>{rentalConditionsArray[1]}</p>
           </RentalLineWrap>

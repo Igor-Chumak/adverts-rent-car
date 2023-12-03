@@ -73,11 +73,9 @@ export const ImgWrap = styled.div`
     height: 100%;
     border-radius: 14px;
   }
-  outline: 1px solid blue;
 `;
 
 export const InfoName = styled.div`
-  /* margin-bottom: ${props => props.theme.spacing(2)}; // 8px; */
   max-width: ${props => props.theme.spacing(69.25)}; // 277px;
   display: flex;
   flex-direction: row;
@@ -92,7 +90,6 @@ export const InfoName = styled.div`
   & span {
     color: ${props => props.theme.colors.accent};
   }
-  outline: 1px solid blue;
 `;
 
 export const Text = styled.p`
@@ -100,15 +97,20 @@ export const Text = styled.p`
   font-weight: ${props => props.theme.fontWeight.medium};
   font-size: ${props => props.theme.fontSizes.small};
   line-height: 1.43;
-  outline: 1px solid blue;
 `;
 
 export const AccessFuncWrap = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: ${props => props.theme.spacing(2)}; // 8px;
   outline: 1px solid red;
+  & > div {
+    margin-bottom: ${props => props.theme.spacing(1)}; // 4px;
+  }
+  & > p:first-child {
+    margin-bottom: ${props => props.theme.spacing(2)}; // 8px;
+  }
+  & > div:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 export const RentalWrap = styled.div`
@@ -122,7 +124,6 @@ export const RentalWrap = styled.div`
 export const RentalLineWrap = styled.div`
   width: 100%;
   display: flex;
-  outline: 1px solid blue;
   & > p {
     padding: 7px 14px;
     font-weight: ${props => props.theme.fontWeight.regular};

@@ -31,18 +31,6 @@ export const BtnLoadMore = styled.button`
   text-align: center;
 `;
 
-// export const Clear = styled(Button)`
-//   position: absolute;
-//   top: 32px;
-//   right: 30px;
-//   margin: 0;
-//   padding-bottom: ${props => props.theme.spacing(1)};
-//   padding-top: ${props => props.theme.spacing(1)};
-//   border: 1px solid ${props => props.theme.colors.dark};
-//   border-radius: 6px;
-//   color: initial;
-// `;
-
 export const OkButton = styled(Button)`
   padding-bottom: ${props => props.theme.spacing(1)};
   padding-top: ${props => props.theme.spacing(1)};
