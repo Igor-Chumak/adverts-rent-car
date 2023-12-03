@@ -57,7 +57,7 @@ export const CardItem = ({ advert }) => {
           <img
             src={imgURL ? `${imgURL}` : DEFAULT_PHOTO}
             alt={`${make} ${model} id:${id}`}
-            width={274}
+            // width={274}
           />
           <SvgFavorite
             type="button"
@@ -97,7 +97,7 @@ export const CardItem = ({ advert }) => {
         </Button>
       </CardWrap>
       {openEditModal && (
-        <Modal advertDetail={advert} handleCloseModal={handleCloseEditModal} />
+        <Modal advert={advert} handleCloseModal={handleCloseEditModal} />
       )}
     </>
   );

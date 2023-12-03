@@ -34,3 +34,22 @@ export const API_ERROR = {
     401: 'Missing header with authorization token',
   },
 };
+
+// const {
+//   id,
+//   year,
+//   make,
+//   model = '',
+//   type = '',
+//   img: imgURL = '',
+//   // description = '',
+//   // fuelConsumption = '',
+//   // engineSize = '',
+//   accessories = [],
+//   // functionalities = [],
+//   rentalPrice = '',
+//   rentalCompany = '',
+//   address = '',
+//   // rentalConditions = '',
+//   // mileage = 0,
+// } = advert;

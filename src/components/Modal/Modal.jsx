@@ -1,23 +1,33 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import PropTypes from 'prop-types';
-import { Overlay, ModalWrapper } from './Modal.styled';
-import {
-  ContactFormForm,
-  ContactFormInput,
-  ContactFormLabel,
-  ContactFormSubmit,
-} from 'components/ContactForm/ContactForm.styled';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { api } from 'store';
+// import PropTypes from 'prop-types';
+// import { useState } from 'react';
+// import { useDispatch } from 'react-redux';
 
-export const Modal = ({ advertDetail, handleCloseModal }) => {
-  const dispatch = useDispatch();
+import { Overlay, ModalWrapper, BtnClose, ImgWrap } from './Modal.styled';
+import DEFAULT_PHOTO from 'images/no_photo.jpg';
+// import { ReactComponent as IconBtnClose } from 'images/x.svg';
 
-  const { name, number, id } = advertDetail;
-  const [nameEdit, setNameEdit] = useState(name);
-  // const [numberEdit, setNumberEdit] = useState(number);
+export const Modal = ({ advert, handleCloseModal }) => {
+  // const dispatch = useDispatch();
+  const {
+    id,
+    year,
+    make,
+    model = '',
+    type = '',
+    img: imgURL = '',
+    description = '',
+    fuelConsumption = '',
+    engineSize = '',
+    accessories = [],
+    functionalities = [],
+    rentalPrice = '',
+    rentalCompany = '',
+    address = '',
+    rentalConditions = '',
+    mileage = 0,
+  } = advert;
 
   const onClickOverlay = e => {
     if (e.target === e.currentTarget) {
@@ -47,37 +57,26 @@ export const Modal = ({ advertDetail, handleCloseModal }) => {
   return createPortal(
     <Overlay onClick={onClickOverlay}>
       <ModalWrapper>
-        <>
-          <ContactFormForm onSubmit={handleSubmit}>
-            <ContactFormLabel>
-              Name
-              <ContactFormInput
-                type="text"
-                name="name"
-                minLength="2"
-                maxLength="22"
-                pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-                title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-                placeholder=""
-                required
-                value={nameEdit}
-                onChange={e => setNameEdit(e.target.value)}
-              />
-            </ContactFormLabel>
-            <ContactFormSubmit type="submit">UpDate</ContactFormSubmit>
-          </ContactFormForm>
-        </>
+        <BtnClose type="button" id={id} onClick={handleSubmit}>
+          X{/* <IconBtnClose /> */}
+        </BtnClose>
+        <ImgWrap>
+          <img
+            src={imgURL ? `${imgURL}` : DEFAULT_PHOTO}
+            alt={`${make} ${model} id:${id}`}
+          />
+        </ImgWrap>
       </ModalWrapper>
     </Overlay>,
     document.querySelector('#root_modal')
   );
 };
 
-ModalWrapper.propTypes = {
-  handleCloseModal: PropTypes.func,
-  contactEdit: PropTypes.exact({
-    name: PropTypes.string,
-    number: PropTypes.string,
-    id: PropTypes.string,
-  }),
-};
+// ModalWrapper.propTypes = {
+//   handleCloseModal: PropTypes.func,
+//   contactEdit: PropTypes.exact({
+//     name: PropTypes.string,
+//     number: PropTypes.string,
+//     id: PropTypes.string,
+//   }),
+// };

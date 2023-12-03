@@ -6,22 +6,13 @@ export const CardWrap = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* color: inherit; */
-  /* font-weight: normal;
-  font-size: 20px; */
-  /* border-color: inherit;
-  border-bottom: 1px solid; */
-
-  /* &:last-child {
-    border-bottom: none;
-  } */
 `;
 
 export const ImgWrap = styled.div`
   position: relative;
-  margin-bottom: 14px;
+  margin-bottom: ${props => props.theme.spacing(3.5)}; // 14px;
   width: 100%;
-  height: 268px;
+  height: ${props => props.theme.spacing(67)}; // 268px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,31 +22,18 @@ export const ImgWrap = styled.div`
     height: 100%;
     border-radius: 14px;
   }
-  /* outline: 1px solid blue; */
 `;
 
 export const SvgFavorite = styled.button`
   position: absolute;
-  top: 14px;
-  right: 14px;
-  width: 18px;
-  height: 18px;
-  /* stroke: ${props => props.theme.colors.white};
-  fill: ${props => props.theme.colors.white}; */
+  top: ${props => props.theme.spacing(3.5)}; // 14px;
+  right: ${props => props.theme.spacing(3.5)}; // 14px;
+  width: ${props => props.theme.spacing(4.5)}; // 18px;
+  height: ${props => props.theme.spacing(4.5)}; // 18px;
 `;
 
-// export const SvgFavorite = styled.svg`
-//   position: absolute;
-//   top: 14px;
-//   right: 14px;
-//   width: 18px;
-//   height: 18px;
-//   stroke: ${props => props.theme.colors.white};
-//   fill: ${props => props.theme.colors.white};
-// `;
-
 export const InfoWrap = styled.div`
-  margin-bottom: 28px;
+  margin-bottom: ${props => props.theme.spacing(7)}; // 28px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -81,7 +59,7 @@ export const InfoName = styled.div`
     color: ${props => props.theme.colors.accent};
   }
   & p:last-child {
-    margin-right: 9px;
+    margin-right: ${props => props.theme.spacing(2.25)}; // 9px;
   }
 `;
 
@@ -99,8 +77,8 @@ export const InfoLine = styled.div`
   white-space: nowrap;
   overflow: hidden;
   & p {
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: ${props => props.theme.spacing(1.5)}; // 6px;
+    padding-right: ${props => props.theme.spacing(1.5)}; // 6px;
     border-color: inherit;
     border-right: 1px solid;
   }
