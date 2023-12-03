@@ -4,6 +4,7 @@ import { createPortal } from 'react-dom';
 // import { useState } from 'react';
 // import { useDispatch } from 'react-redux';
 
+import { numberToDivide } from 'utilities/number_to_divide';
 import {
   Overlay,
   ModalWrapper,
@@ -40,6 +41,9 @@ export const Modal = ({ advert, handleCloseModal }) => {
     rentalConditions = '',
     mileage = 0,
   } = advert;
+
+  const rentalConditionsArray = rentalConditions.split('\n');
+  const rentalConditionsAge = rentalConditionsArray[0].split(':');
 
   const onClickOverlay = e => {
     if (e.target === e.currentTarget) {
@@ -97,19 +101,22 @@ export const Modal = ({ advert, handleCloseModal }) => {
           </InfoLine>
           <Text>{description}</Text>
         </InfoWrap>
+
         <RentalWrap>
           <Text>Rental Conditions:</Text>
           <RentalLineWrap>
-            <p>Minimum age : 25</p>
-            <p>Valid driver's license</p>
+            <p>
+              {rentalConditionsAge[0]}:<span>{rentalConditionsAge[1]}</span>
+            </p>
+            <p>{rentalConditionsArray[1]}</p>
           </RentalLineWrap>
           <RentalLineWrap>
-            <p>Security deposit required</p>
+            <p>{rentalConditionsArray[2]}</p>
             <p>
-              Mileage: <span>5,858</span>
+              Mileage: <span>{numberToDivide(mileage)}</span>
             </p>
             <p>
-              Price: <span>40$</span>
+              Price: <span>{rentalPrice.slice(1)}$</span>
             </p>
           </RentalLineWrap>
         </RentalWrap>

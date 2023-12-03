@@ -97,10 +97,18 @@ export const InfoName = styled.div`
 
 export const Text = styled.p`
   width: 100%;
-  font-weight: ${props => props.theme.fontWeight.regular};
+  font-weight: ${props => props.theme.fontWeight.medium};
   font-size: ${props => props.theme.fontSizes.small};
   line-height: 1.43;
   outline: 1px solid blue;
+`;
+
+export const AccessFuncWrap = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: ${props => props.theme.spacing(2)}; // 8px;
+  outline: 1px solid red;
 `;
 
 export const RentalWrap = styled.div`
@@ -120,5 +128,9 @@ export const RentalLineWrap = styled.div`
     font-weight: ${props => props.theme.fontWeight.regular};
     font-size: ${props => props.theme.fontSizes.smallest};
     line-height: 1.5;
+  }
+  & span {
+    font-weight: ${props => props.theme.fontWeight.semiBold};
+    color: ${props => props.theme.colors.accent};
   }
 `;
