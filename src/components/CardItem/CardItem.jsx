@@ -4,6 +4,7 @@ import {
   // useDispatch,
   useSelector,
 } from 'react-redux';
+
 import { selectIsLoading } from 'store';
 import { Button } from 'components';
 import {
@@ -12,10 +13,12 @@ import {
   InfoLine,
   InfoName,
   InfoWrap,
+  SvgFavorite,
 } from './CardItem.styled';
 import { Modal } from 'components/Modal/Modal';
 
 import DEFAULT_PHOTO from 'images/no_photo.jpg';
+import IconFavorite from 'images/favorite1.svg';
 
 export const CardItem = ({ advert }) => {
   const {
@@ -54,6 +57,9 @@ export const CardItem = ({ advert }) => {
             alt={`${make} ${model} id:${id}`}
             width={274}
           />
+          <SvgFavorite>
+            <use href={IconFavorite} width={24} height={24} />
+          </SvgFavorite>
         </ImgWrap>
         <InfoWrap>
           <InfoName>

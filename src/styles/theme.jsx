@@ -1,4 +1,4 @@
-// import bgimage from 'image/car-rent-1920x1280.jpg';
+import bgimage from 'images/car-rent-1920x1280.jpg';
 
 export const theme = Object.freeze({
   colors: {
@@ -38,7 +38,6 @@ export const theme = Object.freeze({
     // main: '2px 3px 4px 2px rgba(20, 20, 20, 0.5)',
     // main: '2px 3px 4px 2px rgba(92, 2, 2, 0.5)',
     main: '2px 3px 4px 0px rgba(92, 2, 2, 0.5)',
-    // main: '0px 4px 10px 4px #9e9e9e',
     btn_vol: `inset rgba(255, 255, 255, 0.2) 8px 8px 18px 5px,
     inset rgba(0, 0, 0, 0.4) -8px -8px 18px 5px`,
     btn_vol_hover: `inset rgba(0, 0, 0, 0.4) 8px 8px 18px 5px,
@@ -57,15 +56,15 @@ export const theme = Object.freeze({
 });
 
 export const darkTheme = {
-  // body: [
-  //   `linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),           url(${bgimage}) no-repeat top left/cover`,
-  // ],
+  bodyImage: [
+    `linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),           url(${bgimage}) no-repeat top left/cover`,
+  ],
   body: '#121417',
   textColor: 'rgb(237,235,232)', // #edebe8
 };
 
 export const lightTheme = {
-  // body: [`url(${bgimage}) no-repeat top left/cover`],
+  bodyImage: [`url(${bgimage}) no-repeat top left/cover`],
   body: '#ffffff',
   textColor: 'rgb(18, 20, 23)', // #121417
 };

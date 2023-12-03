@@ -18,6 +18,7 @@ export const CardWrap = styled.li`
 `;
 
 export const ImgWrap = styled.div`
+  position: relative;
   margin-bottom: 14px;
   width: 100%;
   height: 268px;
@@ -27,6 +28,17 @@ export const ImgWrap = styled.div`
   & > img {
     border-radius: 14px;
   }
+  outline: 1px solid blue;
+`;
+
+export const SvgFavorite = styled.svg`
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 18px;
+  height: 18px;
+  /* stroke: ${props => props.theme.colors.dark};
+  fill: ${props => props.theme.colors.dark}; */
 `;
 
 export const InfoWrap = styled.div`

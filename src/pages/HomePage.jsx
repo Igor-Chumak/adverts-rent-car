@@ -1,9 +1,9 @@
-import { ContainerPage } from 'components';
+import { WrapHomePage } from 'components';
 
 const HomePage = () => {
   return (
     <main>
-      <ContainerPage>
+      <WrapHomePage>
         <h1
           style={{
             fontSize: '60px',
@@ -26,7 +26,7 @@ const HomePage = () => {
           insurance is included in the price.
         </p>
         <p style={{ marginTop: 'auto' }}>&#169; Igor Chumak</p>
-      </ContainerPage>
+      </WrapHomePage>
     </main>
   );
 };

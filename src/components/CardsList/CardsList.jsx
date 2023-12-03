@@ -14,7 +14,7 @@ export const CardList = () => {
   const advertsToList = useSelector(selectAdverts);
 
   useEffect(() => {
-    dispatch(api.getAdvertThunk());
+    dispatch(api.getAdvertThunk({ page: 1 }));
   }, [dispatch]);
 
   return (
@@ -29,7 +29,7 @@ export const CardList = () => {
           <CardItem advert={advert} key={advert.id} />
         ))}
       </CardsListBox>
-      {advertsToList.length > 0 && <BtnLoadMore>Load more</BtnLoadMore>}
+      {advertsToList.length === 12 && <BtnLoadMore>Load more</BtnLoadMore>}
     </>
   );
 };
