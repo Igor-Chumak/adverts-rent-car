@@ -106,7 +106,7 @@ export const Modal = ({ advert, handleCloseModal }) => {
           <Text>Rental Conditions:</Text>
           <RentalLineWrap>
             <p>
-              `{rentalConditionsArray[0].split(':')[0]}:`
+              {rentalConditionsArray[0].split(':')[0]}:
               <span>{rentalConditionsArray[0].split(':')[1]}</span>
             </p>
             <p>{rentalConditionsArray[1]}</p>
