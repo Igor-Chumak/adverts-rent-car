@@ -1,10 +1,10 @@
 import { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIsLoading, selectError } from 'store';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { useEffect } from 'react';
 
+import { selectIsLoading, selectError } from 'store';
 import { Loader, RestrictedRoute, SharedLayout } from 'components';
 import { api } from 'store';
 
@@ -44,11 +44,7 @@ export const App = () => {
     dispatch(api.getAllAdvertThunk());
   }, [dispatch]);
 
-  // const { isRefreshing } = useAuth();
-  const isRefreshing = false;
-  return isRefreshing ? (
-    <Loader />
-  ) : (
+  return (
     <>
       <Routes>
         <Route path="/" element={<SharedLayout />}>

@@ -13,7 +13,7 @@ export const handleFulfilled = state => {
 export const handleGetAllAdverts = (state, { payload }) => {
   state.statistic.totalAds = payload.length;
 
-  state.makeList = payload
+  state.statistic.makeList = payload
     .map(i => i.make)
     .reduce((acc, i) => {
       if (!acc.includes(i)) acc.push(i);
@@ -21,7 +21,7 @@ export const handleGetAllAdverts = (state, { payload }) => {
     }, [])
     .sort((a, b) => a.localeCompare(b));
 
-  state.priceList = payload
+  state.statistic.priceList = payload
     .map(i => Math.ceil(+i.rentalPrice.slice(1) / 10) * 10)
     .reduce((acc, i) => {
       if (!acc.includes(i)) acc.push(i);
@@ -31,14 +31,12 @@ export const handleGetAllAdverts = (state, { payload }) => {
 };
 
 export const handleGetAdverts = (state, action) => {
-  // state.items.unshift(action.payload);
-  state.items = action.payload;
+  state.items.push(...action.payload);
 };
 
 export const handleRejected = (state, action) => {
   console.log('Adverts handler rejected :>> ', action);
   state.isLoading = false;
-  // state.error = action.payload;
   switch (action.type) {
     case 'adverts/fetch.get/rejected':
       console.log('adverts/fetch.get:>> ', action.payload.status);

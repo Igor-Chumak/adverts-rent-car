@@ -1,8 +1,12 @@
 import { BtnHome, WrapHomePage } from 'components';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
+import { selectIsLoading } from 'store';
 
 const HomePage = () => {
   const navigate = useNavigate();
+  const isLoading = useSelector(selectIsLoading);
   return (
     <main>
       <WrapHomePage>
@@ -32,6 +36,7 @@ const HomePage = () => {
           onClick={() => {
             navigate('/catalog');
           }}
+          disabled={isLoading}
         >
           Learn more
         </BtnHome>
