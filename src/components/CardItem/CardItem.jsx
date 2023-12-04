@@ -13,12 +13,12 @@ import {
   SvgFavorite,
 } from './CardItem.styled';
 import { Modal } from 'components/Modal/Modal';
+import { removeFromFavorites } from 'store';
+import { addToFavorites } from 'store';
 
 import DEFAULT_PHOTO from 'assets/no_photo.jpg';
 import { ReactComponent as IconNoFavorite } from 'assets/no_favorite.svg';
 import { ReactComponent as IconFavorite } from 'assets/favorite.svg';
-import { removeFromFavorites } from 'store';
-import { addToFavorites } from 'store';
 
 export const CardItem = ({ advert }) => {
   const {
