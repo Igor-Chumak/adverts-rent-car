@@ -10,7 +10,7 @@ axios.defaults.params = {};
 export const getAdvertThunk = createAsyncThunk(
   'adverts/fetch.get',
   async (payload, thunkAPI) => {
-    const { advertId = '', page = 1 } = payload;
+    const { advertId = '', page = '' } = payload;
     const searchParams = new URLSearchParams({
       limit: 12,
       page,
