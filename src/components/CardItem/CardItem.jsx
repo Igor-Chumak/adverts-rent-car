@@ -98,15 +98,21 @@ export const CardItem = ({ advert }) => {
 
 CardItem.propTypes = {
   advert: PropTypes.exact({
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     year: PropTypes.number.isRequired,
     make: PropTypes.string.isRequired,
     model: PropTypes.string,
     type: PropTypes.string,
     img: PropTypes.string,
+    description: PropTypes.string,
+    fuelConsumption: PropTypes.string,
+    engineSize: PropTypes.string,
     accessories: PropTypes.array,
+    functionalities: PropTypes.array,
     rentalPrice: PropTypes.string,
     rentalCompany: PropTypes.string,
     address: PropTypes.string,
+    rentalConditions: PropTypes.string,
+    mileage: PropTypes.number,
   }),
 };

@@ -20,17 +20,17 @@ const themePersistConfig = {
   storage,
 };
 
-// const refreshPersistConfig = {
-//   key: LOCAL_STORAGE_KEY + '_refresh',
-//   storage,
-//   whitelist: ['refresh'],
-// };
+const favoritePersistConfig = {
+  key: LOCAL_STORAGE_KEY + '_favorite',
+  storage,
+  // whitelist: ['refresh'],
+};
 
 export const store = configureStore({
   reducer: {
-    // refresh: persistReducer(refreshPersistConfig, refreshReducer),
     theme: persistReducer(themePersistConfig, modeThemeReducer),
     adverts: advertsReducer,
+    // favorite: persistReducer(favoritePersistConfig, favoritehReducer),
     filter: filterReducer,
   },
   middleware: getDefaultMiddleware =>

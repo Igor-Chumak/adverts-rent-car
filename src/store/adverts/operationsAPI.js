@@ -12,7 +12,7 @@ axios.defaults.params = {};
 export const getAdvertThunk = createAsyncThunk(
   'adverts/fetch.get',
   async (payload, thunkAPI) => {
-    const { advertId = '', page = '' } = payload;
+    const { advertId = '', page = 1 } = payload;
     const searchParams = new URLSearchParams({
       limit: LIMIT_PAGE_API,
       page,
@@ -34,7 +34,7 @@ export const getAdvertThunk = createAsyncThunk(
 
 export const getAllAdvertThunk = createAsyncThunk(
   'adverts/fetchAll.get',
-  async (payload, thunkAPI) => {
+  async (_, thunkAPI) => {
     try {
       const { data } = await axios.get(`${PATHNAME}`);
       return data;

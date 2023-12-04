@@ -1,14 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getAdvertThunk } from 'store/adverts/operationsAPI';
+import { getAdvertThunk, getAllAdvertThunk } from 'store/adverts/operationsAPI';
 import {
   handleFulfilled,
   handleGetAdverts,
+  handleGetAllAdverts,
   handlePending,
   handleRejected,
 } from './advertsHandlers';
 
 const initialState = {
   items: [],
+  statistic: {
+    totalAds: 0,
+    priceList: [],
+    makeList: [],
+  },
   isLoading: false,
   error: {
     message: '',
@@ -22,6 +28,7 @@ const advertsSlice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(getAdvertThunk.fulfilled, handleGetAdverts)
+      .addCase(getAllAdvertThunk.fulfilled, handleGetAllAdverts)
       .addMatcher(isPendingAction, handlePending)
       .addMatcher(isRejectedAction, handleRejected)
       .addMatcher(
