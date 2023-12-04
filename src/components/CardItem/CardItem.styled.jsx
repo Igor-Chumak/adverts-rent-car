@@ -32,8 +32,29 @@ export const SvgFavorite = styled.button`
   width: ${props => props.theme.spacing(4.5)}; // 18px;
   height: ${props => props.theme.spacing(4.5)}; // 18px;
   fill: transparent;
-  &:hover svg,
-  &:focus svg {
+`;
+
+export const FavoriteIconStroke = styled.svg`
+  width: ${props => props.theme.spacing(4.5)}; // 18px;
+  height: ${props => props.theme.spacing(4.5)}; // 18px;
+  fill: transparent;
+  stroke: #ffffffcc;
+  transition: stroke 150ms ease;
+
+  button:hover > &,
+  button:focus-visible > & {
+    stroke: ${props => props.theme.colors.hover};
+  }
+`;
+
+export const FavoriteIconFill = styled.svg`
+  width: ${props => props.theme.spacing(4.5)}; // 18px;
+  height: ${props => props.theme.spacing(4.5)}; // 18px;
+  fill: ${props => props.theme.colors.accent};
+  transition: fill 150ms ease;
+
+  button:hover > &,
+  button:focus-visible > & {
     fill: ${props => props.theme.colors.hover};
   }
 `;

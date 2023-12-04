@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectIsLoading } from 'store';
 import { Button } from 'components';
 import {
+  FavoriteIconStroke,
+  FavoriteIconFill,
   CardWrap,
   ImgWrap,
   InfoLine,
@@ -17,8 +19,7 @@ import { removeFromFavorites } from 'store';
 import { addToFavorites } from 'store';
 
 import DEFAULT_PHOTO from 'assets/no_photo.jpg';
-import { ReactComponent as IconNoFavorite } from 'assets/no_favorite.svg';
-import { ReactComponent as IconFavorite } from 'assets/favorite.svg';
+import sprite from 'assets/sprite.svg';
 
 export const CardItem = ({ advert }) => {
   const {
@@ -66,7 +67,15 @@ export const CardItem = ({ advert }) => {
             onClick={() => handleFavorite()}
             disabled={isLoading}
           >
-            {isFavorite ? <IconFavorite /> : <IconNoFavorite />}
+            {isFavorite ? (
+              <FavoriteIconFill>
+                <use href={`${sprite}#icon-active`}></use>
+              </FavoriteIconFill>
+            ) : (
+              <FavoriteIconStroke>
+                <use href={`${sprite}#icon-normal`}></use>
+              </FavoriteIconStroke>
+            )}
           </SvgFavorite>
         </ImgWrap>
         <InfoWrap>
