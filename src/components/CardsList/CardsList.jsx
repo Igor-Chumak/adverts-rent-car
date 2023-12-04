@@ -27,8 +27,11 @@ export const CardList = () => {
       console.log('page :>> ', page);
       dispatch(api.getAdvertThunk({ page }));
     }
-    return () => setUpdated(true);
   }, [dispatch, page, updated]);
+
+  useEffect(() => {
+    setUpdated(true);
+  }, []);
 
   useEffect(() => {
     if (
