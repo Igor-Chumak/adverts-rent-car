@@ -61,7 +61,7 @@ export const Modal = ({ advert, handleCloseModal }) => {
   return createPortal(
     <Overlay onClick={onClickOverlay}>
       <ModalWrapper>
-        <BtnClose type="button" id={id} onClick={() => handleCloseModal('')}>
+        <BtnClose type="button" onClick={() => handleCloseModal('')}>
           X
         </BtnClose>
         <InfoWrap>
@@ -106,7 +106,7 @@ export const Modal = ({ advert, handleCloseModal }) => {
           <Text>Rental Conditions:</Text>
           <RentalLineWrap>
             <p>
-              {rentalConditionsArray[0].split(':')[0]}:
+              `${rentalConditionsArray[0].split(':')[0]}:`
               <span>{rentalConditionsArray[0].split(':')[1]}</span>
             </p>
             <p>{rentalConditionsArray[1]}</p>
@@ -121,7 +121,7 @@ export const Modal = ({ advert, handleCloseModal }) => {
             </p>
           </RentalLineWrap>
         </RentalWrap>
-        <BtnRental>Rental car</BtnRental>
+        <BtnRental href="tel:+380730000000">Rental car</BtnRental>
       </ModalWrapper>
     </Overlay>,
     document.querySelector('#root_modal')

@@ -17,9 +17,23 @@ export const Button = styled.button`
   }
 `;
 
-export const BtnRental = styled(Button)`
+export const BtnRental = styled.a`
   margin-right: auto;
+  padding-top: ${props => props.theme.spacing(3)};
+  padding-bottom: ${props => props.theme.spacing(3)};
   width: ${props => props.theme.spacing(42)}; // 168
+  display: block;
+  color: ${props => props.theme.colors.white};
+  font-weight: ${props => props.theme.fontWeight.semiBold};
+  font-size: ${props => props.theme.fontSizes.small};
+  line-height: 1.43;
+  text-align: center;
+  background-color: ${props => props.theme.colors.accent};
+  border-radius: ${props => props.theme.spacing(3)};
+  &:hover,
+  &:focus {
+    background-color: ${props => props.theme.colors.hover};
+  }
 `;
 
 export const BtnHome = styled(Button)`

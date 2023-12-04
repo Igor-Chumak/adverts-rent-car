@@ -21,7 +21,7 @@ import DEFAULT_PHOTO from 'assets/no_photo.jpg';
 import { ReactComponent as IconNoFavorite } from 'assets/no_favorite.svg';
 import { ReactComponent as IconFavorite } from 'assets/favorite.svg';
 
-export const CardItem = ({ advert }) => {
+export const CardItem = ({ advert, isLoadMoreVisible }) => {
   const {
     id,
     year,
@@ -115,4 +115,5 @@ CardItem.propTypes = {
     rentalConditions: PropTypes.string,
     mileage: PropTypes.number,
   }),
+  isLoadMoreVisible: PropTypes.bool.isRequired,
 };

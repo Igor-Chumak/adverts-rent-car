@@ -7,6 +7,11 @@ export const selectIsLoading = state => state.adverts.isLoading;
 
 export const selectError = state => state.adverts.error.message;
 
+export const selectStatistic = state => state.statistic;
+// export const selectTotalAds = state => state.statistic?.totalAds;
+// export const selectPriceList = state => state.statistic?.priceList;
+// export const selectMakeList = state => state.statistic?.MakeList;
+
 export const selectFilter = state => state.filter;
 
 export const selectSortBy = state => state.sortby;
