@@ -12,6 +12,7 @@ export const theme = Object.freeze({
     imgBackground: 'rgba(79, 84, 92, 0.5)',
     alert: '#ec8080',
     title: 'rgb(0, 32, 105)', // #002069
+    titleA: 'rgb(0, 32, 105, 0.7)', // #002069
     accent: '#3470FF',
     hover: '#0B44CD',
     borderInfo: 'rgba(18, 20, 23, 0.1)',
@@ -42,6 +43,7 @@ export const theme = Object.freeze({
     inset rgba(0, 0, 0, 0.4) -8px -8px 18px 5px`,
     btn_vol_hover: `inset rgba(0, 0, 0, 0.4) 8px 8px 18px 5px,
       inset rgba(255, 255, 255, 0.2) -8px -8px 18px 5px`,
+    title: '1px 1px 1px #ffff',
   },
 
   animation: {
