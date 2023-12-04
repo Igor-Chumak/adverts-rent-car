@@ -30,26 +30,25 @@ export const getAdvertThunk = createAsyncThunk(
   }
 );
 
-// export const addContactThunk = createAsyncThunk(
-//   'contacts/fetch.post',
-//   async (contact, thunkAPI) => {
-//     try {
-//       const { data } = await axios.post(PATHNAME, contact);
-//       return data;
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(`${error.message} <- ${error.code}`);
-//     }
-//   }
-// );
+export const getAllAdvertThunk = createAsyncThunk(
+  'adverts/fetchAll.get',
+  async (payload, thunkAPI) => {
+    const { advertId = '', page = 1 } = payload;
+    const searchParams = new URLSearchParams({
+      limit: 12,
+      page,
+    });
 
-// export const deleteContactThunk = createAsyncThunk(
-//   'contacts/fetch.delete',
-//   async (contactId, thunkAPI) => {
-//     try {
-//       const { data } = await axios.delete(`${PATHNAME}${contactId}`);
-//       return data;
-//     } catch (error) {
-//       return thunkAPI.rejectWithValue(`${error.message} <- ${error.code}`);
-//     }
-//   }
-// );
+    try {
+      const { data } = await axios.get(
+        `${PATHNAME}${advertId}?${searchParams}`
+      );
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue({
+        message: `${error.message} <- ${error.code}`,
+        status: `${error.request.status}`,
+      });
+    }
+  }
+);
