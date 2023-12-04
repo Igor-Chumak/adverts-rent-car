@@ -1,4 +1,5 @@
 export const LOCAL_STORAGE_KEY = 'rentcar';
+export const LIMIT_PAGE_API = 12;
 
 export const API_ERROR = {
   refresh: {

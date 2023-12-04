@@ -1,5 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { LIMIT_PAGE_API } from 'store/constants';
+
 const API_KEY = '656a28e6de53105b0dd8376e';
 const PATHNAME = 'adverts';
 axios.defaults.baseURL = `https://${API_KEY}.mockapi.io/`;
@@ -12,7 +14,7 @@ export const getAdvertThunk = createAsyncThunk(
   async (payload, thunkAPI) => {
     const { advertId = '', page = '' } = payload;
     const searchParams = new URLSearchParams({
-      limit: 12,
+      limit: LIMIT_PAGE_API,
       page,
     });
 
@@ -33,16 +35,8 @@ export const getAdvertThunk = createAsyncThunk(
 export const getAllAdvertThunk = createAsyncThunk(
   'adverts/fetchAll.get',
   async (payload, thunkAPI) => {
-    const { advertId = '', page = 1 } = payload;
-    const searchParams = new URLSearchParams({
-      limit: 12,
-      page,
-    });
-
     try {
-      const { data } = await axios.get(
-        `${PATHNAME}${advertId}?${searchParams}`
-      );
+      const { data } = await axios.get(`${PATHNAME}`);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue({
