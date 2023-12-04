@@ -11,7 +11,6 @@ import {
   REGISTER,
 } from 'redux-persist';
 import { LOCAL_STORAGE_KEY } from 'store/constants';
-import { sortbyReducer } from './filter/sortbySlice';
 import { modeThemeReducer } from './theme/themeSlice';
 import { filterReducer } from './filter/filterSlice';
 import { advertsReducer } from './adverts/advertsSlice';
@@ -33,7 +32,6 @@ export const store = configureStore({
     theme: persistReducer(themePersistConfig, modeThemeReducer),
     adverts: advertsReducer,
     filter: filterReducer,
-    sortby: sortbyReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

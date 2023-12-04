@@ -1,11 +1,5 @@
 export const LOCAL_STORAGE_KEY = 'rentcar';
 
-export const SORT_BY = {
-  NONE: 'none',
-  AZ_SORT: 'azsort',
-  ZA_SORT: 'zasort',
-};
-
 export const API_ERROR = {
   refresh: {
     101: 'Unable to fetch user',
@@ -34,22 +28,3 @@ export const API_ERROR = {
     401: 'Missing header with authorization token',
   },
 };
-
-// const {
-//   id,
-//   year,
-//   make,
-//   model = '',
-//   type = '',
-//   img: imgURL = '',
-//   // description = '',
-//   // fuelConsumption = '',
-//   // engineSize = '',
-//   accessories = [],
-//   // functionalities = [],
-//   rentalPrice = '',
-//   rentalCompany = '',
-//   address = '',
-//   // rentalConditions = '',
-//   // mileage = 0,
-// } = advert;

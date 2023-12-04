@@ -2,7 +2,7 @@
 import // selectUser,
 // selectIsLoggedIn,
 // selectIsRefreshing,
-'store/auth/authSelectors';
+'store/adverts';
 
 export const useAuth = () => {
   // const isLoggedIn = useSelector(selectIsLoggedIn);
