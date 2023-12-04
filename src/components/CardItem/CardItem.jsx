@@ -17,9 +17,9 @@ import {
 } from './CardItem.styled';
 import { Modal } from 'components/Modal/Modal';
 
-import DEFAULT_PHOTO from 'images/no_photo.jpg';
-import { ReactComponent as IconNoFavorite } from 'images/no_favorite.svg';
-import { ReactComponent as IconFavorite } from 'images/favorite.svg';
+import DEFAULT_PHOTO from 'assets/no_photo.jpg';
+import { ReactComponent as IconNoFavorite } from 'assets/no_favorite.svg';
+import { ReactComponent as IconFavorite } from 'assets/favorite.svg';
 
 export const CardItem = ({ advert }) => {
   const {

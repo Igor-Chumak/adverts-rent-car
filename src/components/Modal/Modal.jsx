@@ -15,7 +15,7 @@ import {
   RentalLineWrap,
   AccessFuncWrap,
 } from './Modal.styled';
-import DEFAULT_PHOTO from 'images/no_photo.jpg';
+import DEFAULT_PHOTO from 'assets/no_photo.jpg';
 import { InfoLine } from 'components/CardItem/CardItem.styled';
 import { BtnRental } from 'components';
 
