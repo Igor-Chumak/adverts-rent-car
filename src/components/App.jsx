@@ -5,7 +5,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { useEffect } from 'react';
 
 import { selectIsLoading, selectError } from 'store';
-import { Loader, RestrictedRoute, SharedLayout } from 'components';
+import { Loader, SharedLayout } from 'components';
 import { api } from 'store';
 
 Notify.init({
@@ -50,15 +50,7 @@ export const App = () => {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
           <Route path="/catalog" element={<CatalogPage />} />
-          <Route
-            path="/favorites"
-            element={
-              <RestrictedRoute
-                redirectTo="/catalog"
-                component={<FavoritesPage />}
-              />
-            }
-          />
+          <Route path="/favorites" element={<FavoritesPage />} />
           <Route path="*" element={<Navigate to={'/'} />} />
         </Route>
       </Routes>

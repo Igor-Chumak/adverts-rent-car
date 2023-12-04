@@ -1,17 +1,18 @@
-// import { useAuth } from 'hooks';
+import { useSelector } from 'react-redux';
 import { NavLinkStyled } from './Navigation.styled';
 
 export const Navigation = () => {
-  // const { isLoggedIn } = useAuth();
-  const isLoggedIn = true;
+  const favorites = useSelector(state => state.favorites.items) ?? [];
 
   return (
     <nav>
       <NavLinkStyled to="/" end>
         Home
       </NavLinkStyled>
-      {isLoggedIn && <NavLinkStyled to="/catalog">Catalog</NavLinkStyled>}
-      {isLoggedIn && <NavLinkStyled to="/favorites">Favorites</NavLinkStyled>}
+      <NavLinkStyled to="/catalog">Catalog</NavLinkStyled>
+      {favorites.length > 0 && (
+        <NavLinkStyled to="/favorites">Favorites</NavLinkStyled>
+      )}
     </nav>
   );
 };

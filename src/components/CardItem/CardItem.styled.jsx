@@ -31,9 +31,10 @@ export const SvgFavorite = styled.button`
   right: ${props => props.theme.spacing(3.5)}; // 14px;
   width: ${props => props.theme.spacing(4.5)}; // 18px;
   height: ${props => props.theme.spacing(4.5)}; // 18px;
+  fill: transparent;
   &:hover svg,
   &:focus svg {
-    fill: #3470ffcc;
+    fill: ${props => props.theme.colors.hover};
   }
 `;
 
