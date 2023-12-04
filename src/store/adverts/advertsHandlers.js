@@ -1,4 +1,4 @@
-import { API_ERROR } from '../constants';
+import { API_ERROR, LIST_PRICE_STEP } from '../constants';
 
 export const handlePending = state => {
   state.isLoading = true;
@@ -22,7 +22,10 @@ export const handleGetAllAdverts = (state, { payload }) => {
     .sort((a, b) => a.localeCompare(b));
 
   state.statistic.priceList = payload
-    .map(i => Math.ceil(+i.rentalPrice.slice(1) / 10) * 10)
+    .map(
+      i =>
+        Math.ceil(+i.rentalPrice.slice(1) / LIST_PRICE_STEP) * LIST_PRICE_STEP
+    )
     .reduce((acc, i) => {
       if (!acc.includes(i)) acc.push(i);
       return acc;

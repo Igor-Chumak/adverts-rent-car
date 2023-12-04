@@ -14,7 +14,7 @@ export const Overlay = styled.div`
 `;
 
 export const ModalWrapper = styled.div`
-  overflow-y: auto;
+  /* overflow-y: auto; */
   position: relative;
   width: ${props => props.theme.spacing(135.25)}; // 541
   height: ${props => props.theme.spacing(188)}; // 752

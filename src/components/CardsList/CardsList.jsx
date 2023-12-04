@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import {
   api,
+  LIMIT_PAGE_API,
   // selectTotalAds,
   // selectVisibleAdverts,
   selectStatistic,
@@ -19,6 +20,7 @@ export const CardList = () => {
   const [updated, setUpdated] = useState(false);
   const [page, setPage] = useState(1);
   const [isLoadMoreVisible, setIsLoadMoreVisible] = useState(false);
+  const pageMax = Math.floor(statistic?.totalAds / LIMIT_PAGE_API) + 1;
 
   useEffect(() => {
     if (updated) {
@@ -27,18 +29,22 @@ export const CardList = () => {
     return () => setUpdated(true);
   }, [dispatch, page, updated]);
 
-  // useEffect(() => {
-  //   setUpdated(true);
-  // }, []);
-
   useEffect(() => {
-    if (advertsToList.length >= 12) {
-      setIsLoadMoreVisible(true);
-    }
-    if (advertsToList.length === statistic?.totalAds) {
+    console.log('advertsToList.length :>> ', advertsToList.length);
+    if (
+      advertsToList.length < 12 ||
+      advertsToList.length === statistic?.totalAds
+    ) {
       setIsLoadMoreVisible(false);
+      return;
     }
+    setIsLoadMoreVisible(true);
   }, [advertsToList.length, statistic?.totalAds]);
+
+  const handlePagination = () => {
+    if (page === pageMax) return;
+    setPage(prev => prev + 1);
+  };
 
   return (
     <>
@@ -53,10 +59,19 @@ export const CardList = () => {
             advert={advert}
             key={advert.id}
             isLoadMoreVisible={isLoadMoreVisible}
+            page={page}
+            setPage={setPage}
           />
         ))}
       </CardsListBox>
-      {advertsToList.length === 12 && <BtnLoadMore>Load more</BtnLoadMore>}
+      {isLoadMoreVisible && (
+        <BtnLoadMore type="button" onClick={handlePagination}>
+          Load more{' '}
+          <span>
+            {page + 1 > pageMax ? pageMax : page + 1} from {pageMax}
+          </span>
+        </BtnLoadMore>
+      )}
     </>
   );
 };
