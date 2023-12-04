@@ -24,7 +24,6 @@ export const CardList = () => {
 
   useEffect(() => {
     if (updated) {
-      console.log('page :>> ', page);
       dispatch(api.getAdvertThunk({ page }));
     }
   }, [dispatch, page, updated]);
@@ -71,7 +70,7 @@ export const CardList = () => {
         <BtnLoadMore type="button" onClick={handlePagination}>
           Load more{' '}
           <span>
-            {page + 1 > pageMax ? pageMax : page + 1} from {pageMax}
+            {page === pageMax ? pageMax : page + 1} from {pageMax}
           </span>
         </BtnLoadMore>
       )}
