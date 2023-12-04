@@ -24,13 +24,13 @@ export const CardList = () => {
 
   useEffect(() => {
     if (updated) {
+      console.log('page :>> ', page);
       dispatch(api.getAdvertThunk({ page }));
     }
     return () => setUpdated(true);
   }, [dispatch, page, updated]);
 
   useEffect(() => {
-    console.log('advertsToList.length :>> ', advertsToList.length);
     if (
       advertsToList.length < 12 ||
       advertsToList.length === statistic?.totalAds
