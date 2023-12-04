@@ -1,14 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import {
-  api,
-  LIMIT_PAGE_API,
-  // selectTotalAds,
-  // selectVisibleAdverts,
-  selectStatistic,
-  selectAdverts,
-} from 'store';
+import { api, LIMIT_PAGE_API, selectStatistic, selectAdverts } from 'store';
 import { BtnLoadMore, CardItem } from 'components';
 import { CardsListBox, CardsListNoItems } from './CardsList.styled';
 
@@ -57,13 +50,7 @@ export const CardList = () => {
           </CardsListNoItems>
         )}
         {advertsToList.map(advert => (
-          <CardItem
-            advert={advert}
-            key={advert.id}
-            isLoadMoreVisible={isLoadMoreVisible}
-            page={page}
-            setPage={setPage}
-          />
+          <CardItem advert={advert} key={advert.id} />
         ))}
       </CardsListBox>
       {isLoadMoreVisible && (
