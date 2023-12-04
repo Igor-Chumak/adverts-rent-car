@@ -1,4 +1,4 @@
-import bgimage from 'images/car-rent-1920x1280.jpg';
+import bgimage from 'assets/car-rent-1920x1280.jpg';
 
 export const theme = Object.freeze({
   colors: {
