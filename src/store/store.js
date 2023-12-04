@@ -12,25 +12,25 @@ import {
 } from 'redux-persist';
 import { LOCAL_STORAGE_KEY } from 'store/constants';
 import { modeThemeReducer } from './theme/themeSlice';
-import { filterReducer } from './filter/filterSlice';
 import { advertsReducer } from './adverts/advertsSlice';
+import { favoritesReducer } from './favorites/favoritesSlice';
+import { filterReducer } from './filter/filterSlice';
 
 const themePersistConfig = {
   key: LOCAL_STORAGE_KEY + '_theme',
   storage,
 };
 
-// const favoritePersistConfig = {
-//   key: LOCAL_STORAGE_KEY + '_favorite',
-//   storage,
-// whitelist: ['refresh'],
-// };
+const favoritePersistConfig = {
+  key: LOCAL_STORAGE_KEY + '_favorite',
+  storage,
+};
 
 export const store = configureStore({
   reducer: {
     theme: persistReducer(themePersistConfig, modeThemeReducer),
     adverts: advertsReducer,
-    // favorite: persistReducer(favoritePersistConfig, favoriteReducer),
+    favorites: persistReducer(favoritePersistConfig, favoritesReducer),
     filter: filterReducer,
   },
   middleware: getDefaultMiddleware =>

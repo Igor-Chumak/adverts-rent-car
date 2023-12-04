@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import {
-  // useDispatch,
-  useSelector,
-} from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { selectIsLoading } from 'store';
 import { Button } from 'components';
@@ -20,6 +17,8 @@ import { Modal } from 'components/Modal/Modal';
 import DEFAULT_PHOTO from 'assets/no_photo.jpg';
 import { ReactComponent as IconNoFavorite } from 'assets/no_favorite.svg';
 import { ReactComponent as IconFavorite } from 'assets/favorite.svg';
+import { removeFromFavorites } from 'store';
+import { addToFavorites } from 'store';
 
 export const CardItem = ({ advert }) => {
   const {
@@ -34,9 +33,18 @@ export const CardItem = ({ advert }) => {
     rentalCompany = '',
     address = '',
   } = advert;
+  const dispatch = useDispatch();
   const [openEditModal, setOpenEditModal] = useState(false);
-  const [favorite, setFavorite] = useState(false);
-  // const dispatch = useDispatch();
+  const favorites = useSelector(state => state.favorites.items) ?? [];
+  const isFavorite = favorites.some(favorite => favorite.id === id);
+
+  const handleFavorite = () => {
+    if (isFavorite) {
+      dispatch(removeFromFavorites(id));
+    } else {
+      dispatch(addToFavorites(advert));
+    }
+  };
 
   const isLoading = useSelector(selectIsLoading);
 
@@ -55,10 +63,10 @@ export const CardItem = ({ advert }) => {
           <SvgFavorite
             type="button"
             id={id}
-            onClick={() => setFavorite(!favorite)}
+            onClick={() => handleFavorite()}
             disabled={isLoading}
           >
-            {favorite ? <IconFavorite /> : <IconNoFavorite />}
+            {isFavorite ? <IconFavorite /> : <IconNoFavorite />}
           </SvgFavorite>
         </ImgWrap>
         <InfoWrap>
