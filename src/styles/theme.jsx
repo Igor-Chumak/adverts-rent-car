@@ -9,6 +9,7 @@ export const theme = Object.freeze({
     dark: '#212121',
     mainBackground: ['linear-gradient(to bottom, #c9d6ff,  #e2e2e2)'],
     tagBackground: ['linear-gradient(to bottom, #FFD194, #D1913C)'],
+    imgBackground: 'rgba(79, 84, 92, 0.5)',
     alert: '#ec8080',
     title: 'rgb(0, 32, 105)', // #002069
     accent: '#3470FF',

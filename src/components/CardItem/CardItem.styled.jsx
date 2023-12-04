@@ -15,11 +15,13 @@ export const ImgWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: ${props => props.theme.colors.imgBackground};
   & > img {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    border-radius: 14px;
   }
 `;
 
@@ -29,6 +31,10 @@ export const SvgFavorite = styled.button`
   right: ${props => props.theme.spacing(3.5)}; // 14px;
   width: ${props => props.theme.spacing(4.5)}; // 18px;
   height: ${props => props.theme.spacing(4.5)}; // 18px;
+  &:hover svg,
+  &:focus svg {
+    fill: #3470ffcc;
+  }
 `;
 
 export const InfoWrap = styled.div`
