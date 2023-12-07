@@ -14,18 +14,29 @@ export const selectFilterMileageFrom = state => state.filters.mileageFrom;
 export const selectFilterMileageTo = state => state.filters.mileageTo;
 
 export const selectVisibleAdverts = createSelector(
-  [selectAdverts, selectFilterMake],
-  (items, make) => {
-    const adverts = items.filter(item => item.make.includes(make));
+  [
+    selectAdverts,
+    selectFilterMake,
+    selectFilterRentalPrice,
+    selectFilterMileageFrom,
+    selectFilterMileageTo,
+  ],
+  (items, make, rentalPrice, mileageFrom, mileageTo) => {
+    let adverts = items || [];
+    if (make) adverts = adverts.filter(item => item.make === make);
+    if (rentalPrice) {
+      adverts = adverts.filter(advert => {
+        return Number(advert.rentalPrice.slice(1)) <= rentalPrice;
+      });
+    }
+    if (mileageFrom) {
+      adverts = adverts.filter(advert => advert.mileage > mileageFrom);
+    }
+    if (mileageTo) {
+      adverts = adverts.filter(advert => advert.mileage < mileageTo);
+    }
+
+    console.log('adverts :>> ', adverts);
     return adverts;
-    // switch (sortby) {
-    //   case SORT_BY.AZ_SORT: {
-    //     return contacts.sort((a, b) => a.name.localeCompare(b.name));
-    //   }
-    //   case SORT_BY.ZA_SORT:
-    //     return contacts.sort((a, b) => b.name.localeCompare(a.name));
-    //   default:
-    //     return contacts;
-    // }
   }
 );

@@ -5,7 +5,6 @@ import {
   api,
   LIMIT_PAGE_API,
   selectStatistic,
-  // selectAdverts,
   clearAdverts,
   selectVisibleAdverts,
 } from 'store';
@@ -14,7 +13,6 @@ import { BtnLoadMore, Filters } from 'components';
 const CatalogPage = () => {
   const dispatch = useDispatch();
   const advertsToList = useSelector(selectVisibleAdverts);
-  // const advertsToList = useSelector(selectAdverts);
   const statistic = useSelector(selectStatistic);
   const [updated, setUpdated] = useState(false);
   const [page, setPage] = useState(1);
@@ -41,7 +39,7 @@ const CatalogPage = () => {
       return;
     }
     setIsLoadMoreVisible(true);
-  }, [advertsToList.length, statistic?.totalAds]);
+  }, [advertsToList?.length, statistic?.totalAds]);
 
   const handlePagination = () => {
     if (page === pageMax) return;
