@@ -35,6 +35,7 @@ export const handleGetAllAdverts = (state, { payload }) => {
 
 export const handleGetAdverts = (state, action) => {
   state.items.push(...action.payload);
+  state.isLoadMoreVisible = action.payload.length < 12 ? false : true;
 };
 
 export const handleRejected = (state, action) => {
@@ -61,20 +62,3 @@ export const handleRejected = (state, action) => {
       state.error = action.payload;
   }
 };
-
-// export const handleAddAdvert = (state, action) => {
-//   // state.isLoading = false;
-//   state.items.unshift(action.payload);
-// };
-
-// export const handleUpdateAdvert = (state, action) => {
-//   // state.isLoading = false;
-//   const index = state.items.findIndex(item => item.id === action.payload.id);
-//   state.items[index] = action.payload;
-// };
-
-// export const handleDeleteAdvert = (state, action) => {
-//   // state.isLoading = false;
-//   const index = state.items.findIndex(item => item.id === action.payload.id);
-//   state.items.splice(index, 1);
-// };

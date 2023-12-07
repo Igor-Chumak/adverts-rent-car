@@ -16,6 +16,7 @@ const initialState = {
     makeList: [],
   },
   isLoading: false,
+  isLoadMoreVisible: false,
   error: {
     message: '',
     status: '',

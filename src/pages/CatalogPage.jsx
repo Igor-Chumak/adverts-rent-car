@@ -3,21 +3,18 @@ import { useSelector, useDispatch } from 'react-redux';
 import { CardList, Section, WrapPage } from 'components';
 import {
   api,
-  LIMIT_PAGE_API,
-  selectStatistic,
   clearAdverts,
   selectVisibleAdverts,
+  selectIsLoadMoreVisible,
 } from 'store';
 import { BtnLoadMore, Filters } from 'components';
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
   const advertsToList = useSelector(selectVisibleAdverts);
-  const statistic = useSelector(selectStatistic);
   const [updated, setUpdated] = useState(false);
   const [page, setPage] = useState(1);
-  const [isLoadMoreVisible, setIsLoadMoreVisible] = useState(false);
-  const pageMax = Math.floor(statistic?.totalAds / LIMIT_PAGE_API) + 1;
+  const isLoadMoreVisible = useSelector(selectIsLoadMoreVisible);
   const filters = useSelector(state => state.filters);
 
   useEffect(() => {
@@ -30,19 +27,7 @@ const CatalogPage = () => {
     setUpdated(true);
   }, []);
 
-  useEffect(() => {
-    if (
-      advertsToList.length < 12 ||
-      advertsToList.length === statistic?.totalAds
-    ) {
-      setIsLoadMoreVisible(false);
-      return;
-    }
-    setIsLoadMoreVisible(true);
-  }, [advertsToList?.length, statistic?.totalAds]);
-
   const handlePagination = () => {
-    if (page === pageMax) return;
     setPage(prev => prev + 1);
   };
 
@@ -59,10 +44,7 @@ const CatalogPage = () => {
         <CardList advertsToList={advertsToList} />
         {isLoadMoreVisible && (
           <BtnLoadMore type="button" onClick={handlePagination}>
-            Load more{' '}
-            <span>
-              {page === pageMax ? pageMax : page + 1} from {pageMax}
-            </span>
+            Load more
           </BtnLoadMore>
         )}
       </Section>

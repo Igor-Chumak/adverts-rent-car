@@ -3,6 +3,7 @@ import { createSelector } from '@reduxjs/toolkit';
 export const selectAdverts = state => state.adverts.items;
 
 export const selectIsLoading = state => state.adverts.isLoading;
+export const selectIsLoadMoreVisible = state => state.adverts.isLoadMoreVisible;
 
 export const selectError = state => state.adverts.error.message;
 
@@ -35,8 +36,6 @@ export const selectVisibleAdverts = createSelector(
     if (mileageTo) {
       adverts = adverts.filter(advert => advert.mileage < mileageTo);
     }
-
-    console.log('adverts :>> ', adverts);
     return adverts;
   }
 );
