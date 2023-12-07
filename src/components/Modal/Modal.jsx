@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 
-import { numberToDivide } from 'utilities/number_to_divide';
 import {
   Overlay,
   ModalWrapper,
@@ -118,7 +117,7 @@ export const Modal = ({ advert, handleCloseModal }) => {
           <RentalLineWrap>
             <p>{rentalConditionsArray[2]}</p>
             <p>
-              Mileage: <span>{numberToDivide(mileage)}</span>
+              Mileage: <span>{mileage.toLocaleString('en-GB')}</span>
             </p>
             <p>
               Price: <span>{rentalPrice.slice(1)}$</span>
