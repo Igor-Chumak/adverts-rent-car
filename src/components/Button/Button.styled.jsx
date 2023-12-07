@@ -68,9 +68,9 @@ export const BtnLoadMore = styled.button`
   font-size: ${props => props.theme.fontSizes.medium};
   line-height: 1.5;
   text-align: center;
-  & > span {
-    font-weight: ${props => props.theme.fontWeight.regular};
-    font-size: ${props => props.theme.fontSizes.small};
-    color: ${props => props.theme.textColor};
+  &:focus,
+  &:hover {
+    color: ${props => props.theme.hover};
+    text-decoration: underline;
   }
 `;
