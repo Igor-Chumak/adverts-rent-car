@@ -17,12 +17,18 @@ export const selectFilterMileageTo = state => state.filters.mileageTo;
 export const selectVisibleAdverts = createSelector(
   [
     selectAdverts,
-    selectFilterMake,
+    // selectFilterMake,
     selectFilterRentalPrice,
     selectFilterMileageFrom,
     selectFilterMileageTo,
   ],
-  (items, make, rentalPrice, mileageFrom, mileageTo) => {
+  (
+    items,
+    // make,
+    rentalPrice,
+    mileageFrom,
+    mileageTo
+  ) => {
     let adverts = items;
     // if (make) adverts = adverts.filter(item => item.make === make);
     if (rentalPrice) {
