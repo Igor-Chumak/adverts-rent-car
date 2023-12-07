@@ -43,6 +43,7 @@ export const selectCustomStyles = type => {
       color: '#121417',
       transform: state.isFocused ? 'rotate(180deg)' : 'none',
       transition: 'transform 200ms ease',
+      // eslint-disable-next-line
       [':hover']: 'none',
     }),
     menu: baseStyles => ({
@@ -71,7 +72,8 @@ export const selectCustomStyles = type => {
       fontSize: '16px',
       fontWeight: 500,
       lineHeight: 'calc(20 / 16)',
-      [':hover']: { color: 'rgba(18, 20, 23, 0.50)' },
+      // eslint-disable-next-line
+      [':hover']: { color: 'rgba(18, 20, 23, 0.80)' },
     }),
   };
 };
