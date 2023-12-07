@@ -9,7 +9,7 @@ export const selectError = state => state.adverts.error.message;
 
 export const selectStatistic = state => state.adverts.statistic;
 
-export const selectFilterMake = state => state.filters.make;
+// export const selectFilterMake = state => state.filters.make;
 export const selectFilterRentalPrice = state => state.filters.rentalPrice;
 export const selectFilterMileageFrom = state => state.filters.mileageFrom;
 export const selectFilterMileageTo = state => state.filters.mileageTo;
