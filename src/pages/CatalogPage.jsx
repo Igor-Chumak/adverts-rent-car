@@ -5,15 +5,16 @@ import {
   api,
   LIMIT_PAGE_API,
   selectStatistic,
-  selectAdverts,
+  // selectAdverts,
   clearAdverts,
+  selectVisibleAdverts,
 } from 'store';
 import { BtnLoadMore, Filters } from 'components';
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
-  // const advertsToList = useSelector(selectVisibleAdverts);
-  const advertsToList = useSelector(selectAdverts);
+  const advertsToList = useSelector(selectVisibleAdverts);
+  // const advertsToList = useSelector(selectAdverts);
   const statistic = useSelector(selectStatistic);
   const [updated, setUpdated] = useState(false);
   const [page, setPage] = useState(1);
@@ -48,7 +49,7 @@ const CatalogPage = () => {
   };
 
   const handleFormSubmit = () => {
-    const { make, rentalPrice } = filters;
+    const { make } = filters;
     dispatch(clearAdverts());
     dispatch(api.getAdvertThunk({ make }));
   };
