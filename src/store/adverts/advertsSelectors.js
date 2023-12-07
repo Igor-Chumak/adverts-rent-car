@@ -23,8 +23,8 @@ export const selectVisibleAdverts = createSelector(
     selectFilterMileageTo,
   ],
   (items, make, rentalPrice, mileageFrom, mileageTo) => {
-    let adverts = items || [];
-    if (make) adverts = adverts.filter(item => item.make === make);
+    let adverts = items;
+    // if (make) adverts = adverts.filter(item => item.make === make);
     if (rentalPrice) {
       adverts = adverts.filter(advert => {
         return Number(advert.rentalPrice.slice(1)) <= rentalPrice;
