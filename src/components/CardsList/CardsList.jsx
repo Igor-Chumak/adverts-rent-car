@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { api, LIMIT_PAGE_API, selectStatistic, selectAdverts } from 'store';
@@ -14,6 +14,17 @@ export const CardList = () => {
   const [page, setPage] = useState(1);
   const [isLoadMoreVisible, setIsLoadMoreVisible] = useState(false);
   const pageMax = Math.floor(statistic?.totalAds / LIMIT_PAGE_API) + 1;
+
+  // const dispatchCallBack = useCallback(
+  //   page => {
+  //     return dispatch(api.getAdvertThunk({ page }));
+  //   },
+  //   [dispatch]
+  // );
+
+  // useEffect(() => {
+  //   dispatchCallBack(page);
+  // }, [dispatchCallBack, page]);
 
   useEffect(() => {
     if (updated) {

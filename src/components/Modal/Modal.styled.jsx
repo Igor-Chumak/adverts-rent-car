@@ -41,6 +41,12 @@ export const BtnClose = styled.button`
   opacity: 80%;
 `;
 
+export const ModalCloseIcon = styled.svg`
+  width: ${props => props.theme.spacing(6)}; // 24px;
+  height: ${props => props.theme.spacing(6)}; // 24px;
+  stroke: #121417;
+`;
+
 export const InfoWrap = styled.div`
   width: 100%;
   & > div {

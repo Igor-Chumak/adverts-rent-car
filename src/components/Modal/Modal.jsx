@@ -14,10 +14,12 @@ import {
   RentalWrap,
   RentalLineWrap,
   AccessFuncWrap,
+  ModalCloseIcon,
 } from './Modal.styled';
 import DEFAULT_PHOTO from 'assets/no_photo.jpg';
 import { InfoLine } from 'components/CardItem/CardItem.styled';
 import { BtnRental } from 'components';
+import sprite from 'assets/sprite.svg';
 
 export const Modal = ({ advert, handleCloseModal }) => {
   const {
@@ -62,7 +64,9 @@ export const Modal = ({ advert, handleCloseModal }) => {
     <Overlay onClick={onClickOverlay}>
       <ModalWrapper>
         <BtnClose type="button" onClick={() => handleCloseModal('')}>
-          X
+          <ModalCloseIcon>
+            <use href={`${sprite}#icon-x`}></use>
+          </ModalCloseIcon>
         </BtnClose>
         <InfoWrap>
           <ImgWrap>
