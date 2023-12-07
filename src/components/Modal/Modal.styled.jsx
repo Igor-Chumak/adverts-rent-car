@@ -121,11 +121,13 @@ export const RentalWrap = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${props => props.theme.spacing(2)}; // 8px;
+  background-color: ${props => props.theme.bg_color.rentalCond};
 `;
 
 export const RentalLineWrap = styled.div`
   width: 100%;
   display: flex;
+  background-color: ${props => props.theme.bg_color.rentalCond};
   & > p {
     padding: 7px 14px;
     font-weight: ${props => props.theme.fontWeight.regular};

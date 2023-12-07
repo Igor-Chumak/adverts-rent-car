@@ -52,6 +52,7 @@ export const theme = Object.freeze({
 
   bg_color: {
     item: 'rgba(248, 248, 248, 0.4)',
+    rentalCond: '#F9F9F9',
     btn: 'rgba(230, 230, 230, 0.3)',
     btn_active: 'rgb(233, 232, 232, 0.8)',
   },
