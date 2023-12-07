@@ -10,31 +10,31 @@ export const CardList = () => {
   // const advertsToList = useSelector(selectVisibleAdverts);
   const advertsToList = useSelector(selectAdverts);
   const statistic = useSelector(selectStatistic);
-  const [updated, setUpdated] = useState(false);
+  // const [updated, setUpdated] = useState(false);
   const [page, setPage] = useState(1);
   const [isLoadMoreVisible, setIsLoadMoreVisible] = useState(false);
   const pageMax = Math.floor(statistic?.totalAds / LIMIT_PAGE_API) + 1;
 
-  // const dispatchCallBack = useCallback(
-  //   page => {
-  //     return dispatch(api.getAdvertThunk({ page }));
-  //   },
-  //   [dispatch]
-  // );
+  const dispatchCallBack = useCallback(
+    page => {
+      return dispatch(api.getAdvertThunk({ page }));
+    },
+    [dispatch]
+  );
+
+  useEffect(() => {
+    dispatchCallBack(page);
+  }, [dispatchCallBack, page]);
 
   // useEffect(() => {
-  //   dispatchCallBack(page);
-  // }, [dispatchCallBack, page]);
+  //   if (updated) {
+  //     dispatch(api.getAdvertThunk({ page }));
+  //   }
+  // }, [dispatch, page, updated]);
 
-  useEffect(() => {
-    if (updated) {
-      dispatch(api.getAdvertThunk({ page }));
-    }
-  }, [dispatch, page, updated]);
-
-  useEffect(() => {
-    setUpdated(true);
-  }, []);
+  // useEffect(() => {
+  //   setUpdated(true);
+  // }, []);
 
   useEffect(() => {
     if (
