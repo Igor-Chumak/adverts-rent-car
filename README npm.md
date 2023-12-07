@@ -47,3 +47,4 @@
   - npm install --save react-spinners >>> import {}ScaleLoader from
     "react-spinners/{}ScaleLoader";
     //https://www.davidhu.io/react-spinners/storybook/?path=/docs/
+  - npm i react-select

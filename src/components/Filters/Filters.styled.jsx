@@ -20,6 +20,7 @@ export const InputUpperText = styled.span`
 
 export const MileageGroupWrapper = styled.div`
   display: flex;
+  border: none;
 
   & :not(:last-child):is(div) {
     border-right: 1px solid rgba(138, 138, 137, 0.2);
@@ -54,6 +55,7 @@ export const MileageInput = styled.input`
   font-size: 18px;
   font-weight: 500;
   line-height: calc(20 / 18);
+  border: 0;
 `;
 
 export const FiltersSearchButton = styled.button`

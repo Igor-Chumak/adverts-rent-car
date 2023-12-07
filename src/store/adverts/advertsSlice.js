@@ -36,6 +36,12 @@ const advertsSlice = createSlice({
         handleFulfilled
       );
   },
+  reducers: {
+    clearAdverts(state, action) {
+      state.items = [...initialState.items];
+      return;
+    },
+  },
 });
 
 function isRejectedAction(action) {
@@ -46,4 +52,5 @@ function isPendingAction(action) {
   return action.type.endsWith('/pending');
 }
 
+export const { clearAdverts } = advertsSlice.actions;
 export const advertsReducer = advertsSlice.reducer;

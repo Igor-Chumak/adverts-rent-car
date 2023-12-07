@@ -10,3 +10,5 @@ export * from 'store/adverts/advertsHandlers';
 export * as api from 'store/adverts/operationsAPI';
 //
 export * from 'store/favorites/favoritesSlice';
+//
+export * from 'store/filters/filtersSlice';

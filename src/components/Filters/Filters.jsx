@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 // import { useGetAllAdvertsQuery } from "../../redux/advertsApi";
-import CustomSelect from '../CustomSelect';
+import { CustomSelect } from 'components';
 import {
   FiltersForm,
   FiltersSearchButton,
@@ -11,14 +11,13 @@ import {
   MileageInputWrapper,
 } from './Filters.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateFilters } from '../../redux/filtersSlice';
+import { updateFilters, selectStatistic } from 'store';
 
-const Filters = ({ onFormSubmit }) => {
-  const { mileageFrom, mileageTo } = useSelector(state => state.filters);
+export const Filters = ({ onFormSubmit }) => {
   const dispatch = useDispatch();
+  const { mileageFrom, mileageTo } = useSelector(state => state.filters);
 
-  const { data } = useGetAllAdvertsQuery();
-  const statistic = data?.statistic;
+  const statistic = useSelector(selectStatistic);
 
   const selectMakeOptions = statistic?.makeList.map(make => {
     return { value: make, label: make };
@@ -107,5 +106,3 @@ const Filters = ({ onFormSubmit }) => {
 Filters.propTypes = {
   onFormSubmit: PropTypes.func.isRequired,
 };
-
-export default Filters;

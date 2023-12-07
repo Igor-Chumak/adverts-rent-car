@@ -9,3 +9,5 @@ export * from 'components/Button/Button.styled';
 export * from 'components/Loader/Loader';
 export * from 'components/Layouts/SharedLayout';
 export * from 'components/Navigation/Navigation';
+export * from 'components/Filters/Filters';
+export * from 'components/CustomSelect/CustomSelect';

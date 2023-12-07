@@ -1,8 +1,8 @@
-import PropTypes from "prop-types";
-import Select from "react-select";
-import { selectCustomStyles } from "./CustomSelectStyles";
+import PropTypes from 'prop-types';
+import Select from 'react-select';
+import { selectCustomStyles } from './CustomSelectStyles';
 
-const CustomSelect = ({
+export const CustomSelect = ({
   selectOptions,
   handleChange,
   type,
@@ -36,5 +36,3 @@ CustomSelect.propTypes = {
   isSearchable: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
 };
-
-export default CustomSelect;

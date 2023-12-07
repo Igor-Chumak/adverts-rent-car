@@ -1,8 +1,9 @@
 # Adverts Rent a Car Application
 
-An app for a car rental company in Ukraine. 
+An app for a car rental company in Ukraine.
 
 Routes are made in the application:
+
 - "/" - the home page with a general description of the services provided by the
   company
 - "/catalogue" - a page containing a catalogue of cars of various configurations
@@ -20,6 +21,7 @@ This project was created with the help of
 - Redux Persist
 - PropTypes
 - Styled Component
+- React-Select
 - Axios
 - Notiflix
 - mockapi.io

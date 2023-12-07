@@ -14,7 +14,7 @@ import { LOCAL_STORAGE_KEY } from 'store/constants';
 import { modeThemeReducer } from './theme/themeSlice';
 import { advertsReducer } from './adverts/advertsSlice';
 import { favoritesReducer } from './favorites/favoritesSlice';
-import { filterReducer } from './filter/filterSlice';
+import { filtersReducer } from './filters/filtersSlice';
 
 const themePersistConfig = {
   key: LOCAL_STORAGE_KEY + '_theme',
@@ -31,7 +31,7 @@ export const store = configureStore({
     theme: persistReducer(themePersistConfig, modeThemeReducer),
     adverts: advertsReducer,
     favorites: persistReducer(favoritePersistConfig, favoritesReducer),
-    filter: filterReducer,
+    filters: filtersReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
